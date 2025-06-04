@@ -1,5 +1,5 @@
 import { Options } from "./animate";
-import { leftTop, widthHeight } from "./utils";
+import { leftBottom, leftTop, rightBottom, widthHeight } from "./utils";
 
 const blackBoxes480x480 = (ratio: number = 1) => {
   return [
@@ -120,8 +120,8 @@ const blackBoxes300x250 = (ratio: number) => {
     {
       frame: 9,
       class: 'blackBox',
-      position: leftTop(1043, 220, 300/1373),
-      dimension: widthHeight(18, 18, 300/1373),
+      position: leftTop(1043, 220, 300 / 1373),
+      dimension: widthHeight(18, 18, 300 / 1373),
     },
     {
       frame: 11,
@@ -180,12 +180,100 @@ const blackBoxes300x250 = (ratio: number) => {
   ]
 }
 
+const blackBoxes300x600 = (ratio: number) => {
+  return [
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(194, 207, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 15,
+      class: 'blackBox',
+      dimension: widthHeight(373, 124, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 18,
+      class: 'blackBox',
+      dimension: widthHeight(66, 260, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 17,
+      class: 'blackBox',
+      dimension: widthHeight(137, 137, ratio),
+      position: leftTop(373, 124, ratio),
+    },
+    {
+      frame: 2,
+      class: 'blackBox',
+      dimension: widthHeight(137, 124, ratio),
+      position: leftTop(510, 0, ratio),
+    },
+    {
+      frame: 20,
+      class: 'blackBox',
+      dimension: widthHeight(68, 68, ratio),
+      position: leftTop(116, 260, ratio),
+    },
+    {
+      frame: 22,
+      class: 'blackBox',
+      dimension: widthHeight(85, 85, ratio),
+      position: leftTop(100, 1485, ratio),
+    },
+
+    {
+      frame: 4,
+      class: 'blackBox',
+      dimension: widthHeight(140, 140, ratio),
+      position: leftBottom(0, 0, ratio),
+    },
+    {
+      frame: 5,
+      class: 'blackBox',
+      dimension: widthHeight(60, 60, ratio),
+      position: leftBottom(140, 140, ratio),
+    },
+
+    {
+      frame: 17,
+      class: 'blackBox',
+      dimension: widthHeight(132, 252, ratio),
+      position: rightBottom(0, 0, ratio),
+    },
+    {
+      frame: 8,
+      class: 'blackBox',
+      dimension: widthHeight(236, 104, ratio),
+      position: rightBottom(0, 0, ratio),
+    },
+    {
+      frame: 12,
+      class: 'blackBox',
+      dimension: widthHeight(60, 60, ratio),
+      position: rightBottom(132, 252, ratio),
+    },
+    {
+      frame: 15,
+      class: 'blackBox',
+      dimension: widthHeight(52, 56, ratio),
+      position: rightBottom(0, 408, ratio),
+    },
+  ]
+}
+
 export const getBlackBoxes = (size: Options['size'], ratio: number) => {
   if (size === '480x480') {
     return blackBoxes480x480(ratio)
   }
   if (size === '300x250') {
     return blackBoxes300x250(ratio)
+  }
+  if (size === '300x600') {
+    return blackBoxes300x600(ratio)
   }
 }
 

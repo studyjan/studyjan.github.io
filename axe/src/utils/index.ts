@@ -5,6 +5,11 @@ export const leftTop = (left: number, top: number, ratio: number = 1) => ({
   top: top * ratio,
 })
 
+export const rightTop = (right: number, top: number, ratio: number = 1) => ({
+  right: right * ratio,
+  top: top * ratio,
+})
+
 export const leftBottom = (left: number, bottom: number, ratio: number = 1) => ({
   left: left * ratio,
   bottom: bottom * ratio,
