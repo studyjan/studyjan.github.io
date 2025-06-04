@@ -1,5 +1,5 @@
-import { Options } from "./animate";
-import { leftBottom, leftTop, rightBottom, widthHeight } from "./utils";
+import { Frame, Options } from "./animate";
+import { leftBottom, leftTop, rightBottom, rightTop, widthHeight } from "./utils";
 
 const blackBoxes480x480 = (ratio: number = 1) => {
   return [
@@ -265,7 +265,84 @@ const blackBoxes300x600 = (ratio: number) => {
   ]
 }
 
-export const getBlackBoxes = (size: Options['size'], ratio: number) => {
+const blackBoxes160x600 = (ratio: number) => {
+  return [
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(169, 111, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 15,
+      class: 'blackBox',
+      dimension: widthHeight(272, 70, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 18,
+      class: 'blackBox',
+      dimension: widthHeight(95, 150, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 17,
+      class: 'blackBox',
+      dimension: widthHeight(80, 80, ratio),
+      position: leftTop(272, 70, ratio),
+    },
+    {
+      frame: 2,
+      class: 'blackBox',
+      dimension: widthHeight(80, 70, ratio),
+      position: leftTop(272 + 80, 0, ratio),
+    },
+    {
+      frame: 20,
+      class: 'blackBox',
+      dimension: widthHeight(39, 39, ratio),
+      position: leftTop(124, 149, ratio),
+    },
+    {
+      frame: 22,
+      class: 'blackBox',
+      dimension: widthHeight(38, 38, ratio),
+      position: leftTop(90, 771, ratio),
+    },
+    {
+      frame: 19,
+      class: 'blackBox',
+      dimension: widthHeight(38, 38, ratio),
+      position: rightTop(0, 0, ratio),
+    },
+    {
+      frame: 17,
+      class: 'blackBox',
+      dimension: widthHeight(126, 352, ratio),
+      position: rightTop(0, 675, ratio),
+    },
+    {
+      frame: 8,
+      class: 'blackBox',
+      dimension: widthHeight(224, 85, ratio),
+      position: leftTop(426, 738, ratio),
+    },
+    {
+      frame: 12,
+      class: 'blackBox',
+      dimension: widthHeight(48, 48, ratio),
+      position: leftTop(466, 626, ratio),
+    },
+    {
+      frame: 15,
+      class: 'blackBox',
+      dimension: widthHeight(48, 48, ratio),
+      position: leftTop(575, 536, ratio),
+    },
+  ]
+}
+
+export const getBlackBoxes = (size: Options['size'], ratio: number): Frame[] => {
   if (size === '480x480') {
     return blackBoxes480x480(ratio)
   }
@@ -274,6 +351,9 @@ export const getBlackBoxes = (size: Options['size'], ratio: number) => {
   }
   if (size === '300x600') {
     return blackBoxes300x600(ratio)
+  }
+  if (size === '160x600') {
+    return blackBoxes160x600(ratio)
   }
 }
 
