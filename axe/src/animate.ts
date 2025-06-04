@@ -39,7 +39,7 @@ export class Animate {
         style: {
           rotate: "9.695deg",
           zIndex: "1",
-          animation: `moveSpray 4000ms linear infinite`
+          animation: `${size === "300x250" ? "moveSprayLess" : "moveSpray"} 4000ms linear infinite`
         }
       },
       ...getBlackBoxes(size, ratio),
@@ -113,7 +113,7 @@ export class Animate {
         style: {
           opacity: '0',
           transition: `opacity ${5 * this.frameTime}ms`,
-          transform: "scale(1)",
+          transform: "scale(1.05)",
           animation: `pulse ${23 * this.frameTime}ms`
         },
         nextStyle: {
