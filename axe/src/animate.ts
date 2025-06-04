@@ -1,5 +1,6 @@
 import { createDivElement, createElement } from "./utils/createElement";
 import { getMobileFrames } from "./framesMobile";
+import { leftBottom, leftTop, rightBottom, widthHeight } from "./utils";
 
 export type Options = {
   spray: "summer" | "dark",
@@ -7,7 +8,7 @@ export type Options = {
   language: "CZ" | "SK",
   text_1?: string
   text_2?: string
-  size: "480x480" | "300x250",
+  size: "480x480" | "300x250" | "300x600",
   ratio: number,
   id: string
 }
@@ -15,7 +16,7 @@ export type Options = {
 export type Frame = {
   frame: number,
   class: string,
-  position: { left: number, top: number }
+  position: { left: number, top: number } | { left: number, bottom: number } | { right: number, bottom: number }
   dimension: { width: number, height: number }
   text?: string
   url?: string
@@ -27,8 +28,194 @@ export class Animate {
   frameTime = 2083 / 50
 
   getFrames = (options: Options): Frame[] => {
+    const { ratio, language, spray, icon, text_1, text_2 } = options
+    const frameTime = this.frameTime
+
     if (options.size === "300x250" || options.size === "480x480") {
       return getMobileFrames(options, this.frameTime)
+    }
+
+
+
+    if (options.size === "300x600") {
+      return [
+        {
+          frame: 0,
+          class: 'image',
+          position: leftTop(360, 1000, ratio),
+          dimension: widthHeight(156 * 4, 471 * 4, ratio),
+
+          url: `./i_spray_${spray}.png`,
+          style: {
+            rotate: "9.695deg",
+            zIndex: "1",
+            animation: `${"moveSpray"} 4000ms linear infinite`
+          }
+        },
+
+      {
+        frame: 25,
+        class: 'image',
+        position: leftTop(32, 388, ratio),
+        dimension: widthHeight(1143, 252, ratio),
+
+        url: `./i_0_CTAbutton${language}.png`,
+        style: {
+          opacity: '0',
+          transition: `opacity ${6 * frameTime}ms`
+        },
+        nextStyle: {
+          opacity: '1'
+        }
+      },
+      {
+        frame: 31,
+        class: 'image',
+        position: leftTop(259+165*4, 149+109*4, ratio),
+        dimension: widthHeight(29 * 3, 43 * 3, ratio),
+
+        url: './i_click.png',
+        style: {
+          opacity: '0',
+          transition: `opacity ${4 * frameTime}ms`,
+          animation: `moveCursor 2000ms infinite`
+        },
+        nextStyle: {
+          opacity: '1'
+        }
+      },
+
+      {
+        frame: 37,
+        class: 'text',
+        position: leftTop(60, 660, ratio),
+        dimension: widthHeight(1000, 170, ratio),
+
+        text: text_1,
+        style: {
+          backgroundSize: "auto 34px !important",
+          fontSize: `${132*ratio}px`
+        }
+      },
+      {
+        frame: 42,
+        class: 'text',
+        position: leftTop(60, 840, ratio),
+        dimension: widthHeight(1100, 170, ratio),
+
+        text: text_2,
+        style: {
+          backgroundSize: "auto 34px !important",
+          fontSize: `${132*ratio}px`
+        }
+      },
+
+
+            {
+        frame: 52,
+        class: 'image',
+        position: leftTop((96), (278 + 190*4), ratio),
+        dimension: {
+          ["keyboard"]: widthHeight(155, 97, ratio * 2),
+          ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * 2),
+          ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2),
+          ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2),
+        }[icon],
+
+        url: `./i_icon_${icon}.png`,
+        style: {
+          opacity: '0',
+          transition: `opacity ${5 * frameTime}ms`,
+          transform: "scale(1.05)",
+          animation: `pulse ${23 * frameTime}ms`
+        },
+        nextStyle: {
+          opacity: '1'
+        }
+      },
+
+
+        {
+          frame: 1,
+          class: 'blackBox',
+          dimension: widthHeight(194, 207, ratio),
+          position: leftTop(0, 0, ratio),
+        },
+        {
+          frame: 15,
+          class: 'blackBox',
+          dimension: widthHeight(373, 124, ratio),
+          position: leftTop(0, 0, ratio),
+        },
+        {
+          frame: 18,
+          class: 'blackBox',
+          dimension: widthHeight(66, 260, ratio),
+          position: leftTop(0, 0, ratio),
+        },
+        {
+          frame: 17,
+          class: 'blackBox',
+          dimension: widthHeight(137, 137, ratio),
+          position: leftTop(373, 124, ratio),
+        },
+        {
+          frame: 2,
+          class: 'blackBox',
+          dimension: widthHeight(137, 124, ratio),
+          position: leftTop(510, 0, ratio),
+        },
+        {
+          frame: 20,
+          class: 'blackBox',
+          dimension: widthHeight(68, 68, ratio),
+          position: leftTop(116, 260, ratio),
+        },
+        {
+          frame: 22,
+          class: 'blackBox',
+          dimension: widthHeight(85, 85, ratio),
+          position: leftTop(100, 1485, ratio),
+        },
+
+        {
+          frame: 4,
+          class: 'blackBox',
+          dimension: widthHeight(140, 140, ratio),
+          position: leftBottom(0, 0, ratio),
+        },
+        {
+          frame: 5,
+          class: 'blackBox',
+          dimension: widthHeight(60, 60, ratio),
+          position: leftBottom(140, 140, ratio),
+        },
+
+        {
+          frame: 17,
+          class: 'blackBox',
+          dimension: widthHeight(132, 252, ratio),
+          position: rightBottom(0, 0, ratio),
+        },
+        {
+          frame: 8,
+          class: 'blackBox',
+          dimension: widthHeight(236, 104, ratio),
+          position: rightBottom(0, 0, ratio),
+        },
+        {
+          frame: 12,
+          class: 'blackBox',
+          dimension: widthHeight(60, 60, ratio),
+          position: rightBottom(132, 252, ratio),
+        },
+        {
+          frame: 15,
+          class: 'blackBox',
+          dimension: widthHeight(52, 56, ratio),
+          position: rightBottom(0, 408, ratio),
+        },
+      ]
     }
   }
 
@@ -50,18 +237,29 @@ export class Animate {
     this.canvas.style.width = `${x}px`
     this.canvas.style.height = `${y}px`
 
-    frames.forEach((frame) => {
+    frames.forEach((frame, index) => {
       if (frame.url) {
         this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: frame.url } }))
       }
 
       setTimeout(() => {
-        const element = createDivElement({ attribute: { class: `${frame.class} poa`, ["data-frame"]: frame.frame } })
+        const element = createDivElement({ attribute: { class: `${frame.class} poa`, ["data-frame"]: frame.frame, ["data-index"]: index } })
 
         element.style.width = `${frame.dimension.width}px`
         element.style.height = `${frame.dimension.height}px`
-        element.style.top = `${frame.position.top}px`
-        element.style.left = `${frame.position.left}px`
+        if ('top' in frame.position) {
+          element.style.top = `${frame.position.top}px`
+        }
+        if ('bottom' in frame.position) {
+          element.style.bottom = `${frame.position.bottom}px`
+        }
+        if ('left' in frame.position) {
+          element.style.left = `${frame.position.left}px`
+        }
+        if ('right' in frame.position) {
+          element.style.right = `${frame.position.right}px`
+        }
+
 
         if (frame.url) {
           element.style.backgroundImage = `url("${frame.url}")`

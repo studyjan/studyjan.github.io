@@ -5,17 +5,17 @@ export const init = (options?: Options) => {
     animate: new Animate(options || {
       id: "canvas",
       spray: "summer",
-      icon: "gameboy",
-      language: "SK",
+      icon: "sun_umbrella",
+      language: "CZ",
 
-      text_1: "A BUĎ",
-      text_2: "MVP LÉTA",
+      text_1: "A léto",
+      text_2: "bude tvoje",
 
       // size: "480x480",
-      size: "300x250",
+      size: "300x600",
 
       // ratio: 1,
-      ratio: 300/480,
+      ratio: 300/1200,
     }),
   }
 }
