@@ -1,6 +1,5 @@
 import { createDivElement, createElement } from "./utils/createElement";
-import { getFrames, getFrames300x250and480x480 } from "./frames";
-import { leftTop, rightBottom, widthHeight } from "./utils";
+import { getFrames } from "./frames";
 import { getBlackBoxes } from "./blackBoxes";
 
 export type Options = {
@@ -9,7 +8,7 @@ export type Options = {
   language: "CZ" | "SK",
   text_1?: string
   text_2?: string
-  size: "480x480" | "300x250" | "300x600" | "160x600",
+  size: "480x480" | "300x250" | "300x600" | "160x600" | "480x300",
   ratio: number,
   id: string
 }
@@ -41,7 +40,9 @@ export class Animate {
 
     this.canvas = document.getElementById(options.id)
 
+    console.log(options)
     const [x, y] = options.size.split("x")
+    console.log(x, y)
 
     this.canvas.style.width = `${x}px`
     this.canvas.style.height = `${y}px`

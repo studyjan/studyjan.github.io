@@ -270,6 +270,106 @@ const getFrames300x600 = ({ spray, icon, language, size, ratio, text_1, text_2 }
   ]
 }
 
+const getFrames480x300 = ({ spray, icon, language, size, ratio, text_1, text_2 }: Options, frameTime: number) => {
+  return [
+    {
+      frame: 0,
+      class: 'image',
+      position: leftTop(300 * 1 / ratio, 20 * 1 / ratio, ratio),
+      dimension: widthHeight(0.85 * 156 * 1 / ratio, 0.85 * 471 * 1 / ratio, ratio),
+
+      url: `./i_spray_${spray}.png`,
+      style: {
+        rotate: "9.695deg",
+        zIndex: "1",
+        animation: `${"moveSpray"} 4000ms linear infinite`
+      }
+    },
+
+    {
+      frame: 25,
+      class: 'image',
+      position: leftTop(152, 152, ratio),
+      dimension: widthHeight(1143, 252, ratio),
+
+      url: `./i_0_CTAbutton${language}.png`,
+      style: {
+        opacity: '0',
+        transition: `opacity ${6 * frameTime}ms`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+
+    {
+      frame: 31,
+      class: 'image',
+      position: leftTop(1113, 330, ratio),
+      dimension: widthHeight(29 * 2.5, 43 * 2.5, ratio),
+
+      url: './i_click.png',
+      style: {
+        opacity: '0',
+        transition: `opacity ${4 * frameTime}ms`,
+        animation: `moveCursor 2000ms infinite`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+
+    {
+      frame: 37,
+      class: 'text',
+      position: leftTop(210, 413, ratio),
+      dimension: widthHeight(1000, 143, ratio),
+
+      text: text_1,
+      style: {
+        backgroundSize: "auto 34px !important",
+        fontSize: `${143 * ratio}px`
+      }
+    },
+    {
+      frame: 42,
+      class: 'text',
+      position: leftTop(210, 413 + 180, ratio),
+      dimension: widthHeight(1500, 143, ratio),
+
+      text: text_2,
+      style: {
+        backgroundSize: "auto 34px !important",
+        fontSize: `${143 * ratio}px`
+      }
+    },
+
+    {
+      frame: 52,
+      class: 'image',
+      position: icon === "sun_umbrella" ? leftTop(180 * 1 / ratio, 185 * 1 / ratio, ratio) : leftTop(180 * 1 / ratio, 190 * 1 / ratio, ratio),
+      dimension: {
+        ["keyboard"]: widthHeight(155, 97, ratio * 2.5),
+        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * 2.5),
+        ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2.5),
+        ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2.5),
+      }[icon],
+
+      url: `./i_icon_${icon}.png`,
+      style: {
+        opacity: '0',
+        transition: `opacity ${5 * frameTime}ms`,
+        transform: "scale(1.05)",
+        animation: `pulse ${23 * frameTime}ms`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+  ]
+}
+
+
 export const getFrames = (options: Options, frameTime: number): Frame[] => {
   if (options.size === "300x250" || options.size === "480x480") {
     return getFrames300x250and480x480(options, frameTime)
@@ -280,4 +380,9 @@ export const getFrames = (options: Options, frameTime: number): Frame[] => {
   if (options.size === "300x600") {
     return getFrames300x600(options, frameTime)
   }
+  if (options.size === "480x300") {
+    return getFrames480x300(options, frameTime)
+  }
+
+  return []
 }
