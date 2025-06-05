@@ -8,7 +8,7 @@ export type Options = {
   language: "CZ" | "SK",
   text_1?: string
   text_2?: string
-  size: "480x480" | "300x250" | "300x600" | "160x600" | "480x300",
+  size: "480x480" | "300x250" | "300x600" | "160x600" | "480x300" | "990x250" | "970x250" | "1200x400",
   ratio: number,
   id: string
 }
