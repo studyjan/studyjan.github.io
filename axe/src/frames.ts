@@ -562,6 +562,103 @@ const getFrames1200x400 = ({ spray, icon, language, size, ratio, text_1, text_2 
 
 
 
+
+const getFrames1200x200 = ({ spray, icon, language, size, ratio, text_1, text_2 }: Options, frameTime: number) => {
+  return [
+    {
+      frame: 0,
+      class: 'image',
+      position: leftTop(980, -76, ratio),
+      dimension: widthHeight(.80 * 156 * 1 / ratio, .80 * 471 * 1 / ratio, ratio),
+
+      url: `./i_spray_${spray}.png`,
+      style: {
+        rotate: "9.695deg",
+        zIndex: "1",
+        animation: `${"moveSpray"} 4000ms linear infinite`
+      }
+    },
+    {
+      frame: 25,
+      class: 'image',
+      position: leftTop(61, 50, ratio),
+      dimension: widthHeight(515, 94, ratio),
+
+      url: `./i_0_CTAbutton${language}V2.png`,
+      style: {
+        opacity: '0',
+        transition: `opacity ${6 * frameTime}ms`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+    {
+      frame: 31,
+      class: 'image',
+      position: leftTop(540, 123, ratio),
+      dimension: widthHeight(38, 57, ratio),
+
+      url: './i_click.png',
+      style: {
+        opacity: '0',
+        transition: `opacity ${4 * frameTime}ms`,
+        animation: `moveCursor 2000ms infinite`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+    {
+      frame: 37,
+      class: 'text',
+      position: leftTop(592, 45, ratio),
+      dimension: widthHeight(500, 143, ratio),
+
+      text: text_1,
+      style: {
+        backgroundSize: "auto 34px !important",
+        fontSize: `${42 * ratio}px`
+      }
+    },
+    {
+      frame: 42,
+      class: 'text',
+      position: leftTop(592, 99, ratio),
+      dimension: widthHeight(1500, 143, ratio),
+
+      text: text_2,
+      style: {
+        backgroundSize: "auto 34px !important",
+        fontSize: `${42 * ratio}px`
+      }
+    },
+    {
+      frame: 52,
+      class: 'image',
+      position: icon === "sun_umbrella" ? leftTop(853, 0, ratio) : leftTop(853, 20, ratio),
+      dimension: {
+        ["keyboard"]: widthHeight(155, 97, ratio * .75),
+        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * .75),
+        ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * .75),
+        ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * .6),
+      }[icon],
+      url: `./i_icon_${icon}.png`,
+      style: {
+        opacity: '0',
+        transition: `opacity ${5 * frameTime}ms`,
+        transform: "scale(1.05)",
+        animation: `pulse ${23 * frameTime}ms`
+      },
+      nextStyle: {
+        opacity: '1'
+      }
+    },
+  ]
+}
+
+
+
 export const getFrames = (options: Options, frameTime: number): Frame[] => {
   if (options.size === "300x250" || options.size === "480x480") {
     return getFrames300x250and480x480(options, frameTime)
@@ -580,6 +677,9 @@ export const getFrames = (options: Options, frameTime: number): Frame[] => {
   }
   if (options.size === "1200x400") {
     return getFrames1200x400(options, frameTime)
+  }
+  if (options.size === "1200x200") {
+    return getFrames1200x200(options, frameTime)
   }
   return []
 }

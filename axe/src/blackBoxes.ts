@@ -597,6 +597,75 @@ const blackBoxes1200x400 = (ratio: number) => {
   ]
 }
 
+const blackBoxes1200x200 = (ratio: number) => {
+  return [
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(79, 10, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(29, 31, ratio),
+      position: leftTop(0, 0, ratio),
+    },
+
+
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(79, 23, ratio),
+      position: leftBottom(0, 0, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(35, 56, ratio),
+      position: leftBottom(0, 0, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(11, 11, ratio),
+      position: leftBottom(35, 56, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(18, 17, ratio),
+      position: leftBottom(2, 75, ratio),
+    },
+
+
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(47, 46, ratio),
+      position: rightBottom(0, 0, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(19, 19, ratio),
+      position: rightBottom(47, 46, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(19, 38, ratio),
+      position: rightBottom(28, 65, ratio),
+    },
+    {
+      frame: 1,
+      class: 'blackBox',
+      dimension: widthHeight(19, 19, ratio),
+      position: rightBottom(8, 103, ratio),
+    },
+  ]
+}
+
 export const getBlackBoxes = (size: Options['size'], ratio: number): Frame[] => {
   if (size === '480x480') {
     return blackBoxes480x480(ratio)
@@ -618,6 +687,10 @@ export const getBlackBoxes = (size: Options['size'], ratio: number): Frame[] => 
   }
   if (size === '1200x400') {
     return blackBoxes1200x400(ratio)
+  }
+
+  if (size === '1200x200') {
+    return blackBoxes1200x200(ratio)
   }
 
   return []
