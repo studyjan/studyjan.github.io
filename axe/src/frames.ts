@@ -6,8 +6,10 @@ const getFrames300x250and480x480 = ({ spray, icon, language, size, ratio, text_1
     {
       frame: 0,
       class: 'image',
-      position: (size === "300x250" ? leftTop(280, 100, ratio) : leftTop(275, 164, ratio)),
-      dimension: widthHeight(156.2, 471.8, ratio),
+      position: size === "300x250" ?
+        leftTop(spray === "summer" ? 298 : 280, 100, ratio) :
+        leftTop(spray === "summer" ? 295 : 275, 164, ratio),
+      dimension: widthHeight(156.2, 471.8, ratio * (spray === "summer" ? 0.95 : 1)),
 
       url: `./i_spray_${spray}.png`,
       style: {
@@ -370,7 +372,7 @@ const getFrames480x300 = ({ spray, icon, language, size, ratio, text_1, text_2 }
 }
 
 const getFrames990and970x250 = ({ spray, icon, language, size, ratio, text_1, text_2 }: Options, frameTime: number) => {
-  const leftDiff = size ==="970x250" ? -20 : 0
+  const leftDiff = size === "970x250" ? -20 : 0
 
   return [
     {
@@ -404,7 +406,7 @@ const getFrames990and970x250 = ({ spray, icon, language, size, ratio, text_1, te
     {
       frame: 31,
       class: 'image',
-      position: leftTop(465, 100, ratio),
+      position: leftTop(465 + leftDiff, 100, ratio),
       dimension: widthHeight(45, 68, ratio),
 
       url: './i_click.png',
@@ -444,7 +446,7 @@ const getFrames990and970x250 = ({ spray, icon, language, size, ratio, text_1, te
     {
       frame: 52,
       class: 'image',
-      position: icon === "sun_umbrella" ? leftTop(530 + leftDiff, 132, ratio) : leftTop(530 + leftDiff, 138, ratio),
+      position: icon === "sun_umbrella" ? leftTop(530 + leftDiff, 132, ratio) : leftTop(530 + leftDiff + (size === "970x250" ? 13 : 0), 138, ratio),
       dimension: {
         ["keyboard"]: widthHeight(155, 97, ratio * .65),
         ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * .65),
