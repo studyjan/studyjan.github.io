@@ -1,5 +1,7 @@
 #!/bin/bash
 
+mkdir export
+
 for filename in ./banner*.html; do
     echo "$filename:"
     basename="${filename%.html}"
@@ -28,4 +30,9 @@ for filename in ./banner*.html; do
 
     zip -r $basename.zip $basename > /dev/null
     rm -rf $basename
+    cp $basename.zip export
+    rm $basename.zip
 done
+
+zip -r export.zip export > /dev/null
+rm -rf export
