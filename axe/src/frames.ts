@@ -78,8 +78,6 @@ const getFrames300x250and480x480 = ({ spray, icon, language, size, ratio, text_1
       class: 'image',
       position: leftTop((size === "300x250" ? 143 : 96), (size === "300x250" ? 260 : 278), ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * (size === "300x250" ? 341 / 428 : 1)),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * (size === "300x250" ? 341 / 428 : 1)),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * (size === "300x250" ? 341 / 428 : 1)),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * (size === "300x250" ? 341 / 428 : 1)),
       }[icon],
@@ -156,8 +154,6 @@ const getFrames160x600 = ({ spray, icon, language, size, ratio, text_1, text_2 }
       class: 'image',
       position: icon === "sun_umbrella" ? leftTop(30 * 4, 120 * 4, ratio) : leftTop(30 * 4, 130 * 4, ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * 2),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * 2),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2),
       }[icon],
@@ -252,8 +248,6 @@ const getFrames300x600 = ({ spray, icon, language, size, ratio, text_1, text_2 }
       class: 'image',
       position: leftTop((96), (278 + 190 * 4), ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * 2),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * 2),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2),
       }[icon],
@@ -351,8 +345,6 @@ const getFrames480x300 = ({ spray, icon, language, size, ratio, text_1, text_2 }
       class: 'image',
       position: icon === "sun_umbrella" ? leftTop(180 * 1 / ratio, 185 * 1 / ratio, ratio) : leftTop(180 * 1 / ratio, 190 * 1 / ratio, ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * 2.5),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * 2.5),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2.5),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2.5),
       }[icon],
@@ -448,8 +440,6 @@ const getFrames990and970x250 = ({ spray, icon, language, size, ratio, text_1, te
       class: 'image',
       position: icon === "sun_umbrella" ? leftTop(530 + leftDiff, 132, ratio) : leftTop(530 + leftDiff + (size === "970x250" ? 13 : 0), 138, ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * .65),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * .65),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * .65),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * .65),
       }[icon],
@@ -543,8 +533,6 @@ const getFrames1200x400 = ({ spray, icon, language, size, ratio, text_1, text_2 
       class: 'image',
       position: icon === "sun_umbrella" ? leftTop(660, 255, ratio) : leftTop(660, 265, ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * .80),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * .80),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * .80),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * .80),
       }[icon],
@@ -640,8 +628,6 @@ const getFrames1200x200 = ({ spray, icon, language, size, ratio, text_1, text_2 
       class: 'image',
       position: icon === "sun_umbrella" ? leftTop(853, 0, ratio) : leftTop(853, 20, ratio),
       dimension: {
-        ["keyboard"]: widthHeight(155, 97, ratio * .75),
-        ["gameboy"]: widthHeight(360, 239, 0.4 * ratio * .75),
         ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * .75),
         ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * .6),
       }[icon],

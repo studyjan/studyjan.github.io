@@ -4,7 +4,7 @@ import { getBlackBoxes } from "./blackBoxes";
 
 export type Options = {
   spray: "summer" | "dark",
-  icon?: "keyboard" | "umbrella" | "sun_umbrella" | "gameboy",
+  icon?: "umbrella" | "sun_umbrella",
   language: "CZ" | "SK",
   text_1?: string
   text_2?: string
