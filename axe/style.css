@@ -1,10 +1,13 @@
 @font-face {
     font-family: 'Rifton';
-    src: url('fonts/rifton-regular.eot');
-    src: url('fonts/rifton-regular.eot?#iefix') format('embedded-opentype'),
-    url('fonts/rifton-regular.woff2') format('woff2'),
-    url('fonts/rifton-regular.woff') format('woff');
+    src: url('fonts/') format('woff2'),
+        url('fonts/subset-Rifton-Regular.woff') format('woff'),
+        url('fonts/subset-Rifton-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
 
 html, body {
     position: relative;
