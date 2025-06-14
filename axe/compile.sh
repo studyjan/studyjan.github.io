@@ -8,8 +8,12 @@ for filename in ./banner*.html; do
     mkdir "$basename"
     cp $filename $basename/index.html
     cp "style.css" $basename
-    cp -r build $basename
-    cp -r fonts $basename
+    cp index.js $basename
+
+    for font in ./subset*; do
+        cp $font $basename
+    done
+
     for img in ./*.png; do
         cp $img $basename
     done

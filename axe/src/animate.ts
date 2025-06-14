@@ -40,9 +40,7 @@ export class Animate {
 
     this.canvas = document.getElementById(options.id)
 
-    console.log(options)
     const [x, y] = options.size.split("x")
-    console.log(x, y)
 
     this.canvas.style.width = `${x}px`
     this.canvas.style.height = `${y}px`

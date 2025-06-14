@@ -1,9 +1,9 @@
 @font-face {
     font-family: 'Rifton';
-    src: url('fonts/subset-Rifton-Regular.woff2') format('woff2'),
-        url('fonts/subset-Rifton-Regular.woff') format('woff'),
-        url('fonts/subset-Rifton-Regular.ttf') format('truetype'),
-        url('fonts/subset-Rifton-Regular.svg#Rifton-Regular') format('svg');
+    src: url('subset-Rifton-Regular.woff2') format('woff2'),
+        url('subset-Rifton-Regular.woff') format('woff'),
+        url('subset-Rifton-Regular.ttf') format('truetype'),
+        url('subset-Rifton-Regular.svg#Rifton-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,6 +25,8 @@ html, body {
     width: 480px;
     height: 480px;
     overflow: hidden;
+    color: #000;
+    text-decoration: none;
 
     background-color: #cfff00;
 }
