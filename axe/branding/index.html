@@ -8,6 +8,7 @@
     <meta name="ad.size" content="width=2000,height=1400">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
+    <script type="text/javascript">var clickTag = "http://www.seznam.cz";</script>
     <style>
         html,
         body {
@@ -19,6 +20,7 @@
         }
 
         #canvas {
+            display: block;
             position: relative;
             width: 2000px;
             height: 1400px;
@@ -37,7 +39,7 @@
 </head>
 
 <body>
-    <div id="canvas">
+    <a href="javascript:void(window.open(clickTag))" id="canvas">
         <img src="./logo.gif" class="img" style="left: 524px; top: 56px; width: 602px;height: 213px;" />
 
         <div class="bb" style="width: 16px; height: 16px;left: 113px; top: 150px;"></div>
@@ -84,7 +86,7 @@
 
         <img src="./cta.png" class="img" style="left: 298px; top: 366px; width: 167px;height: 76px;" />
         <img src="./cta.png" class="img" style="right: 290px; top: 366px; width: 167px;height: 76px;" />
-    </div>
+    </a>
 </body>
 
 </html>
