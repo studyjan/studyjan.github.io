@@ -148,27 +148,6 @@ const getFrames160x600 = ({ spray, icon, language, size, ratio, text_1, text_2 }
         opacity: '1'
       }
     },
-
-    {
-      frame: 36,
-      class: 'image',
-      position: icon === "sun_umbrella" ? leftTop(30 * 4, 120 * 4, ratio) : leftTop(30 * 4, 130 * 4, ratio),
-      dimension: {
-        ["umbrella"]: widthHeight(762, 727, 0.2 * ratio * 2),
-        ["sun_umbrella"]: widthHeight(1479, 1481, 0.12 * ratio * 2),
-      }[icon],
-
-      url: `./i_icon_${icon}.png`,
-      style: {
-        opacity: '0',
-        transition: `opacity ${5 * frameTime}ms`,
-        transform: "scale(1.05)",
-        animation: `pulse ${23 * frameTime}ms`
-      },
-      nextStyle: {
-        opacity: '1'
-      }
-    },
   ]
 }
 

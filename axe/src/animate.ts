@@ -31,10 +31,10 @@ export class Animate {
   head = document.getElementsByTagName("head")
 
   constructor(options: Options) {
-    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./fonts/rifton-regular.eot" } }))
-    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./fonts/rifton-regular.eot?#iefix" } }))
-    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./fonts/rifton-regular.woff2" } }))
-    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./fonts/rifton-regular.woff" } }))
+    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./subset-Rifton-Regular.woff2" } }))
+    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./subset-Rifton-Regular.woff" } }))
+    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./subset-Rifton-Regular.ttf" } }))
+    this.head[0]?.appendChild(createElement({ element: 'link', attribute: { rel: "prefetch", href: "./subset-Rifton-Regular.svg#Rifton-Regular" } }))
 
     const frames = [...getFrames(options, this.frameTime), ...getBlackBoxes(options.size, options.ratio),]
 
