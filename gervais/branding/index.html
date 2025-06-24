@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Branding GERVAIS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="ad.size" content="width=2000,height=1400">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <script type="text/javascript">var clickTag = "http://www.seznam.cz";</script>
+    <style>
+        html,
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            min-height: 100%;
+        }
+
+        #canvas {
+            display: block;
+            position: relative;
+            width: 2000px;
+            height: 1400px;
+            background-color: #a5fffa;
+        }
+
+        .left {
+            background-color: #117944;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .left .animate {
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: fromLeft 1.5s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .left .objects {
+            background-image: url(./left_shadow.png);
+            position: absolute;
+            width: 270px;
+            height: 330px;
+            z-index: 1;
+            top: 227px;
+            left: 120px;
+        }
+
+        .right {
+            background-color: #001e8a;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            overflow: hidden;
+        }
+
+        .right .animate {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: fromRight 1.5s;
+            animation-timing-function: ease-in-out;
+        }
+
+        .right .objects {
+            background-image: url(./right_shadow.png);
+            position: absolute;
+            width: 270px;
+            height: 346px;
+            z-index: 1;
+            top: 227px;
+            right: 126px;
+        }
+
+        .content {
+            background-color: #a5fffa;
+            position: absolute;
+            left: 325px;
+            right: 325px;
+            top: 210px;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .top {
+            background-image: url(./creme.png);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 438px;
+        }
+
+        .top .text {
+            background-image: url(./creme_text.png);
+            position: absolute;
+            top: 27px;
+            left: 509px;
+            width: 983px;
+            height: 147px;
+        }
+
+        .button {
+            background-image: url(./gervais.cz.png);
+            background-size: cover;
+            position: absolute;
+            width: 97px;
+            height: 30px;
+            z-index: 1;
+            top: 558px;
+
+            transform: scale(1);
+            animation: pulse 2s infinite;
+        }
+
+        .left .button {
+            left: 208px;
+        }
+
+        .right .button {
+            right: 211px;
+        }
+
+
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.07);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.07);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fromLeft {
+            0% {
+                left: -330px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+
+        @keyframes fromRight {
+            0% {
+                right: -330px;
+            }
+
+            100% {
+                right: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="javascript:void(window.open(clickTag))" id="canvas">
+        <div class="left">
+            <div class="animate">
+                <div class="objects"></div>
+                <div class="button"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="animate">
+                <div class="objects"></div>
+                <div class="button"></div>
+            </div>
+        </div>
+        <div class="top">
+            <div class="text"></div>
+        </div>
+        <div class="content"></div>
+    </a>
+</body>
+
+</html>
