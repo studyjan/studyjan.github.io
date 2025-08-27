@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'Rifton';
+    src: url('subset-Rifton-Regular.woff2') format('woff2'),
+        url('subset-Rifton-Regular.woff') format('woff'),
+        url('subset-Rifton-Regular.ttf') format('truetype'),
+        url('subset-Rifton-Regular.svg#Rifton-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+html, body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100%;
+}
+
+#canvas {
+    display: block;
+    position: relative;
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+    color: #000;
+    text-decoration: none;
+
+    background-color: #cfff00;
+}
+
+.text {
+    font-family: "Rifton";
+}
+
+.poa {
+    position: absolute;
+}
+
+.blackBox {
+    background-color: #000;
+}
+
+.bgr {
+    background-color: rgba(255, 0, 0, .5) !important;
+
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: contain !important;
+}
+
+.image {
+    background-color: transparent;
+    background-size: cover;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.5172413793); }
+    26% { transform: scale(1.1034482759); }
+    39% { transform: scale(1.01724137931); }
+    56% { transform: scale(1.1482758621); }
+    100% { transform: scale(1.05); }
+}
+
+@keyframes moveSpray {
+    0% { transform: translate(0px, 0px); }
+    5% { transform: translate(-1px, 0px); }
+    11% { transform: translate(-2px, 1px); }
+    16% { transform: translate(-1px, 2px); }
+    21% { transform: translate(1px, 4px); }
+    26% { transform: translate(4px, 4px); }
+    32% { transform: translate(6.5px, 2px); }
+    37% { transform: translate(7.5px, 1px); }
+    42% { transform: translate(6.5px, 2px); }
+    47% { transform: translate(4.5px, 2px); }
+    53% { transform: translate(1px, 2px); }
+    58% { transform: translate(-1px, 1px); }
+    63% { transform: translate(0px, -2px); }
+    68% { transform: translate(2.5px, -3px); }
+    74% { transform: translate(4.5px, -2px); }
+    79% { transform: translate(5.5px, 1px); }
+    84% { transform: translate(4px, 2px); }
+    89% { transform: translate(1.5px, 1px); }
+    95% { transform: translate(-1px, 0px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+@keyframes moveSprayLess {
+    0% { transform: translate(1px, 1.5px); }
+    5% { transform: translate(0.5px, 1.5px); }
+    11% { transform: translate(0px, 2px); }
+    16% { transform: translate(0.5px, 2.5px); }
+    21% { transform: translate(1.5px, 3.5px); }
+    26% { transform: translate(3px, 3.5px); }
+    32% { transform: translate(4.25px, 2.5px); }
+    37% { transform: translate(4.75px, 2px); }
+    42% { transform: translate(4.25px, 2.5px); }
+    47% { transform: translate(3.25px, 2.5px); }
+    53% { transform: translate(1.5px, 2.5px); }
+    58% { transform: translate(0.5px, 2px); }
+    63% { transform: translate(1px, 0.5px); }
+    68% { transform: translate(2.25px, 0px); }
+    74% { transform: translate(3.25px, 0.5px); }
+    79% { transform: translate(3.75px, 2px); }
+    84% { transform: translate(3px, 2.5px); }
+    89% { transform: translate(1.75px, 2px); }
+    95% { transform: translate(0.5px, 1.5px); }
+    100% { transform: translate(1px, 1.5px); }
+}
+
+@keyframes moveCursor {
+    0% { transform: translate(3.0px, 0.0px); }
+    2% { transform: translate(2.96px, 0.31px); }
+    5% { transform: translate(2.85px, 0.62px); }
+    7% { transform: translate(2.67px, 0.91px); }
+    10% { transform: translate(2.43px, 1.18px); }
+    12% { transform: translate(2.12px, 1.41px); }
+    15% { transform: translate(1.76px, 1.62px); }
+    17% { transform: translate(1.36px, 1.78px); }
+    20% { transform: translate(0.93px, 1.9px); }
+    22% { transform: translate(0.47px, 1.98px); }
+    25% { transform: translate(0.0px, 2.0px); }
+    27% { transform: translate(-0.47px, 1.98px); }
+    30% { transform: translate(-0.93px, 1.9px); }
+    32% { transform: translate(-1.36px, 1.78px); }
+    35% { transform: translate(-1.76px, 1.62px); }
+    37% { transform: translate(-2.12px, 1.41px); }
+    40% { transform: translate(-2.43px, 1.18px); }
+    42% { transform: translate(-2.67px, 0.91px); }
+    45% { transform: translate(-2.85px, 0.62px); }
+    47% { transform: translate(-2.96px, 0.31px); }
+    50% { transform: translate(-3.0px, 0.0px); }
+    52% { transform: translate(-2.96px, -0.31px); }
+    55% { transform: translate(-2.85px, -0.62px); }
+    57% { transform: translate(-2.67px, -0.91px); }
+    60% { transform: translate(-2.43px, -1.18px); }
+    62% { transform: translate(-2.12px, -1.41px); }
+    65% { transform: translate(-1.76px, -1.62px); }
+    67% { transform: translate(-1.36px, -1.78px); }
+    70% { transform: translate(-0.93px, -1.9px); }
+    72% { transform: translate(-0.47px, -1.98px); }
+    75% { transform: translate(-0.0px, -2.0px); }
+    77% { transform: translate(0.47px, -1.98px); }
+    80% { transform: translate(0.93px, -1.9px); }
+    82% { transform: translate(1.36px, -1.78px); }
+    85% { transform: translate(1.76px, -1.62px); }
+    87% { transform: translate(2.12px, -1.41px); }
+    90% { transform: translate(2.43px, -1.18px); }
+    92% { transform: translate(2.67px, -0.91px); }
+    95% { transform: translate(2.85px, -0.62px); }
+    97% { transform: translate(2.96px, -0.31px); }
+    100% { transform: translate(3.0px, 0.0px); }
+}

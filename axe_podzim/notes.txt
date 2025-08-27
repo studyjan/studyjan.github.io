@@ -1,0 +1,17 @@
+**CZ**
+   P   D
+- [X] [ ]  Desktop Branding (Seznam) - 2000x1400px
+- [X] [X]  Banner - 160x600
+- [X] [X]  Banner - 300x250
+- [X] [X]  Banner - 300x600
+- [X] [X]  Banner - 480x300
+- [X] [X]  Banner - 480x480
+
+**SK**
+   P   D
+- [X] [X]  Banner - 300x250
+- [X] [X]  Banner - 300x600
+- [X] [X]  Banner - 970x250
+- [X] [X]  Banner - 990x250
+- [X] [X]  Banner - 1200x200
+- [X] [X]  Banner - 1200x400
