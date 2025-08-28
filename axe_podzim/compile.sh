@@ -38,6 +38,12 @@ for filename in ./banner*.html; do
     rm $basename.zip
 done
 
+echo "branding:"
+rm branding/.DS_Store 2> /dev/null
+zip -r branding.zip branding
+cp branding.zip export
+rm branding.zip
+
 zip -r export.zip export > /dev/null
 rm -rf export
 
