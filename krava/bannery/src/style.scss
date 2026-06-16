@@ -1,0 +1,374 @@
+@use 'animations/480x300' as size480x300;
+@use 'animations/480x480' as size480x480;
+
+.bg-image {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+.product {
+    .size480x300 & {
+        width: calc(318px / 2);
+        height: calc(336px / 2);
+
+        bottom: 9px;
+        left: 28px;
+    }
+
+    .size480x300.plain & {
+        background-image: url('./assets/480x300/product-plain.png');
+        width: calc(324px / 2);
+        height: calc(342px / 2);
+    }
+    .size480x300.sunka & {
+        background-image: url('./assets/480x300/product-sunka.png');
+    }
+    .size480x300.emental & {
+        background-image: url('./assets/480x300/product-emental.png');
+    }
+
+    .size480x480 & {
+        width: calc(418px / 2);
+        height: calc(434px / 2);
+
+        bottom: 21px;
+        left: 32px;
+    }
+    .size480x480.plain & {
+        background-image: url('./assets/480x480/product-plain.png');
+    }
+    .size480x480.sunka & {
+        background-image: url('./assets/480x480/product-sunka.png');
+    }
+    .size480x480.emental & {
+        background-image: url('./assets/480x480/product-emental.png');
+    }
+}
+.snackuj {
+    .size480x300 & {
+        width: calc(490px / 2);
+        height: calc(316px / 2);
+
+        top: 15px;
+        right: 21px;
+    }
+
+    .size480x300.plain & {
+        background-image: url('./assets/480x300/snackuj-plain.png');
+    }
+    .size480x300.sunka & {
+        background-image: url('./assets/480x300/snackuj-sunka.png');
+    }
+    .size480x300.emental & {
+        background-image: url('./assets/480x300/snackuj-emental.png');
+    }
+
+    .size480x480 & {
+        width: calc(628px / 2);
+        height: calc(406px / 2);
+
+        top: 25px;
+        right: 27px;
+    }
+    .size480x480.plain & {
+        background-image: url('./assets/480x480/snackuj-plain.png');
+    }
+    .size480x480.sunka & {
+        background-image: url('./assets/480x480/snackuj-sunka.png');
+    }
+    .size480x480.emental & {
+        background-image: url('./assets/480x480/snackuj-emental.png');
+    }
+}
+
+.size480x300, .size480x480 {
+    .button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
+        transform-origin: center;
+        will-change: transform;
+        backface-visibility: hidden;
+    }
+}
+
+.button {
+    .size480x300 & {
+        width: calc(284px / 2);
+        height: calc(68px / 2);
+
+        top: 241px;
+        right: 24px;
+
+        background-image: url('./assets/480x300/button.png');
+
+        animation: size480x300-button-pulse 6.5s ease-in-out 4s infinite;
+    }
+    .size480x480 & {
+        width: calc(368px / 2);
+        height: calc(86px / 2);
+
+        top: 406px;
+        right: 32px;
+
+        background-image: url('./assets/480x480/button.png');
+
+        animation: size480x480-button-pulse 6.5s ease-in-out 4s infinite;
+    }
+}
+.chleba {
+    .size480x300 & {
+        width: calc(252px / 2);
+        height: calc(192px / 2);
+
+        top: 92px;
+        right: 287px;
+
+        background-image: url('./assets/480x300/chleba.png');
+
+        animation:
+            size480x300-chleba-intro 1.4s ease-out forwards,
+            size480x300-chleba-loop 3.5s 1.4s linear infinite;
+    }
+    .size480x480 & {
+        width: calc(326px / 2);
+        height: calc(246px / 2);
+
+        top: 185px;
+        right: 276px;
+
+        background-image: url('./assets/480x480/chleba.png');
+
+        animation:
+            size480x480-chleba-intro 1.7s ease-out forwards,
+            size480x480-chleba-loop 3.5s 1.7s linear infinite;
+    }
+}
+.okurka {
+    .size480x300 & {
+        width: calc(182px / 2);
+        height: calc(162px / 2);
+
+        top: 21px;
+        right: 273px;
+
+        background-image: url('./assets/480x300/okurka.png');
+
+        animation:
+            size480x300-okurka-intro 1s ease-out forwards,
+            size480x300-okurka-loop 2.6s 1s linear infinite;
+    }
+    .size480x480 & {
+        width: calc(222px / 2);
+        height: calc(218px / 2);
+
+        top: 90px;
+        right: 263px;
+
+        background-image: url('./assets/480x480/okurka.png');
+
+        animation:
+            size480x480-okurka-intro 1s ease-out forwards,
+            size480x480-okurka-loop 2.6s 1s linear infinite;
+    }
+}
+.rajce {
+    .size480x300 & {
+        width: calc(208px / 2);
+        height: calc(134px / 2);
+
+        top: 73px;
+        right: 266px;
+
+        background-image: url('./assets/480x300/rajce.png');
+
+        animation:
+            size480x300-rajce-intro 1.2s ease-out forwards,
+            size480x300-rajce-loop 2.9s 1.2s linear infinite;
+    }
+    .size480x480 & {
+        width: calc(270px / 2);
+        height: calc(172px / 2);
+
+        top: 163px;
+        right: 251px;
+
+        background-image: url('./assets/480x480/rajce.png');
+
+        animation:
+            size480x480-rajce-intro 1.2s ease-out forwards,
+            size480x480-rajce-loop 2.9s 1.2s linear infinite;
+    }
+}
+.syr {
+    .size480x300 & {
+        width: calc(236px / 2);
+        height: calc(232px / 2);
+
+        top: 117px;
+        right: 128px;
+
+        animation:
+            size480x300-syr-intro 1.5s linear forwards,
+            size480x300-syr-loop 3.2s 1.5s linear infinite;
+    }
+    .size480x300.plain & {
+        background-image: url('./assets/480x300/syr-plain.png');
+    }
+    .size480x300.sunka & {
+        background-image: url('./assets/480x300/syr-sunka.png');
+    }
+    .size480x300.emental & {
+        background-image: url('./assets/480x300/syr-emental.png');
+    }
+
+    .size480x480 & {
+        width: calc(294px / 2);
+        height: calc(304px / 2);
+
+        top: 233px;
+        right: 69px;
+
+        animation:
+            size480x480-syr-intro 1.5s linear forwards,
+            size480x480-syr-loop 3.2s 1.5s linear infinite;
+    }
+    .size480x480.plain & {
+        background-image: url('./assets/480x480/syr-plain.png');
+    }
+    .size480x480.sunka & {
+        background-image: url('./assets/480x480/syr-sunka.png');
+    }
+    .size480x480.emental & {
+        background-image: url('./assets/480x480/syr-emental.png');
+    }
+}
+.voda {
+    .size480x300 & {
+        width: calc(342px / 2);
+        height: calc(292px / 2);
+
+        top: 42px;
+        right: 247px;
+
+        background-image: url('./assets/480x300/voda.png');
+
+        animation:
+            size480x300-voda-intro 1.9s ease-out forwards,
+            size480x300-voda-loop 3.1s 1.9s linear infinite;
+    }
+    .size480x480 & {
+        width: calc(444px / 2);
+        height: calc(378px / 2);
+
+        top: 114px;
+        right: 215px;
+
+        background-image: url('./assets/480x480/voda.png');
+
+        animation:
+            size480x480-voda-intro 1.9s ease-out forwards,
+            size480x480-voda-loop 3.1s 1.9s linear infinite;
+    }
+}
+.drobky {
+    .size480x300 & {
+        width: calc(450px / 2);
+        height: calc(284px / 2);
+
+        top: 30px;
+        right: 212px;
+
+        background-image: url('./assets/480x300/drobky.png');
+
+        animation:
+            size480x300-drobky-intro 2.1s ease-out forwards,
+            size480x300-drobky-loop 3.7s 2.1s linear infinite;
+    }
+    .size480x480 & {
+        width: calc(544px / 2);
+        height: calc(368px / 2);
+
+        top: 92px;
+        right: 173px;
+
+        background-image: url('./assets/480x480/drobky.png');
+
+        animation:
+            size480x480-drobky-intro 2.1s ease-out forwards,
+            size480x480-drobky-loop 3.7s 2.1s linear infinite;
+    }
+}
+
+#banner {
+    position: relative;
+
+    .size480x300 & {
+        width: 480px;
+        height: 300px;
+    }
+    .size480x300.plain & {
+        background: #a7d0f3;
+        background: radial-gradient(
+            circle 236px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #a7d0f3 100%
+        );
+    }
+    .size480x300.sunka & {
+        background: #f2a4b9;
+        background: radial-gradient(
+            circle 236px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #f2a4b9 100%
+        );
+    }
+    .size480x300.emental & {
+        background: #f0be6b;
+        background: radial-gradient(
+            circle 236px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #f0be6b 100%
+        );
+    }
+
+
+    .size480x480 & {
+        width: 480px;
+        height: 480px;
+    }
+
+    .size480x480.plain & {
+        background: #82bdf0;
+        background: radial-gradient(
+            circle 490px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #82bdf0 100%
+        );
+    }
+    .size480x480.sunka & {
+        background: #f3b1c0;
+        background: radial-gradient(
+            circle 490px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #f3b1c0 100%
+        );
+    }
+    .size480x480.emental & {
+        background: #f1c67f;
+        background: radial-gradient(
+            circle 490px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #f1c67f 100%
+        );
+    }
+}
+
+
+body {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}

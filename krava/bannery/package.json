@@ -1,0 +1,12 @@
+{
+  "name": "bannery",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "sass src/style.scss src/style.css --style=expanded --no-source-map",
+    "watch": "sass --watch src/style.scss src/style.css --style=expanded --no-source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
