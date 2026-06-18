@@ -1,3 +1,6 @@
+@use 'animations/300x250' as size300x250;
+@use 'animations/300x300' as size300x300;
+@use 'animations/300x600' as size300x600;
 @use 'animations/480x300' as size480x300;
 @use 'animations/480x480' as size480x480;
 
@@ -8,9 +11,63 @@
 }
 
 .product {
+    .size300x600 & {
+        // velikost jako produkt v 480x480 (418/2 x 434/2), vycentrovany ((300-209)/2)
+        width: 209px;
+        height: 217px;
+
+        bottom: 45.5px;
+        left: 45.5px;
+    }
+    .size300x600.plain & {
+        background-image: url('./assets/300x600/product-plain.png');
+    }
+    .size300x600.sunka & {
+        background-image: url('./assets/300x600/product-sunka.png');
+    }
+    .size300x600.emental & {
+        background-image: url('./assets/300x600/product-emental.png');
+    }
+
+    .size300x250 & {
+        width: 111.3px;
+        height: 117.6px;
+
+        bottom: 10px;
+        left: 15px;
+    }
+    .size300x250.plain & {
+        background-image: url('./assets/300x250/product-plain.png');
+        width: 113.4px;
+        height: 119.7px;
+    }
+    .size300x250.sunka & {
+        background-image: url('./assets/300x250/product-sunka.png');
+    }
+    .size300x250.emental & {
+        background-image: url('./assets/300x250/product-emental.png');
+    }
+
+    .size300x300 & {
+        width: 130.625px;
+        height: 135.625px;
+
+        bottom: 13.125px;
+        left: 20px;
+    }
+    .size300x300.plain & {
+        background-image: url('./assets/300x300/product-plain.png');
+    }
+    .size300x300.sunka & {
+        background-image: url('./assets/300x300/product-sunka.png');
+    }
+    .size300x300.emental & {
+        background-image: url('./assets/300x300/product-emental.png');
+    }
+
     .size480x300 & {
-        width: calc(318px / 2);
-        height: calc(336px / 2);
+        width: 159px;
+        height: 168px;
 
         bottom: 9px;
         left: 28px;
@@ -18,8 +75,8 @@
 
     .size480x300.plain & {
         background-image: url('./assets/480x300/product-plain.png');
-        width: calc(324px / 2);
-        height: calc(342px / 2);
+        width: 162px;
+        height: 171px;
     }
     .size480x300.sunka & {
         background-image: url('./assets/480x300/product-sunka.png');
@@ -29,8 +86,8 @@
     }
 
     .size480x480 & {
-        width: calc(418px / 2);
-        height: calc(434px / 2);
+        width: 209px;
+        height: 217px;
 
         bottom: 21px;
         left: 32px;
@@ -46,9 +103,65 @@
     }
 }
 .snackuj {
+    .size300x600 & {
+        // roztazeny o 20px na sirku (196.25 + 20), vyska proporcionalne
+        width: 216.25px;
+        height: 139.8px;
+
+        // vycentrovany horizontalne ((300-216.25)/2)
+        top: 15.625px;
+        left: 41.875px;
+
+        rotate: -5deg;
+    }
+    .size300x600.plain & {
+        background-image: url('./assets/300x600/snackuj-plain.png');
+    }
+    .size300x600.sunka & {
+        background-image: url('./assets/300x600/snackuj-sunka.png');
+    }
+    .size300x600.emental & {
+        background-image: url('./assets/300x600/snackuj-emental.png');
+    }
+
+    .size300x250 & {
+        width: 196px;
+        height: 126.4px;
+
+        // stejna pozice od top-right jako v 300x300
+        top: 15.625px;
+        right: 16.875px;
+    }
+    .size300x250.plain & {
+        background-image: url('./assets/300x250/snackuj-plain.png');
+    }
+    .size300x250.sunka & {
+        background-image: url('./assets/300x250/snackuj-sunka.png');
+    }
+    .size300x250.emental & {
+        background-image: url('./assets/300x250/snackuj-emental.png');
+    }
+
+    .size300x300 & {
+        width: 196.25px;
+        height: 126.875px;
+
+        top: 15.625px;
+        right: 16.875px;
+    }
+    .size300x300.plain & {
+        background-image: url('./assets/300x300/snackuj-plain.png');
+    }
+    .size300x300.sunka & {
+        background-image: url('./assets/300x300/snackuj-sunka.png');
+    }
+    .size300x300.emental & {
+        background-image: url('./assets/300x300/snackuj-emental.png');
+    }
+
     .size480x300 & {
-        width: calc(490px / 2);
-        height: calc(316px / 2);
+        width: 245px;
+        height: 158px;
 
         top: 15px;
         right: 21px;
@@ -65,8 +178,8 @@
     }
 
     .size480x480 & {
-        width: calc(628px / 2);
-        height: calc(406px / 2);
+        width: 314px;
+        height: 203px;
 
         top: 25px;
         right: 27px;
@@ -82,18 +195,43 @@
     }
 }
 
-.size480x300, .size480x480 {
-    .button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
-        transform-origin: center;
-        will-change: transform;
-        backface-visibility: hidden;
-    }
+.button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
+    transform-origin: center;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .button {
+    .size300x600 & {
+        display: none;
+    }
+    .size300x250 & {
+        // shodny s 300x300: stejna velikost, obrazek i pozice od spodu-vpravo
+        width: 115px;
+        height: 26.875px;
+
+        // shodne s 300x300: od spodu 19.375px, od prava 20px
+        bottom: 19.375px;
+        right: 20px;
+
+        background-image: url('./assets/300x250/button.png');
+
+        animation: size300x250-button-pulse 6.5s ease-in-out 4s infinite;
+    }
+    .size300x300 & {
+        width: 115px;
+        height: 26.875px;
+
+        top: 253.75px;
+        right: 20px;
+
+        background-image: url('./assets/300x300/button.png');
+
+        animation: size300x300-button-pulse 6.5s ease-in-out 4s infinite;
+    }
     .size480x300 & {
-        width: calc(284px / 2);
-        height: calc(68px / 2);
+        width: 142px;
+        height: 34px;
 
         top: 241px;
         right: 24px;
@@ -103,8 +241,8 @@
         animation: size480x300-button-pulse 6.5s ease-in-out 4s infinite;
     }
     .size480x480 & {
-        width: calc(368px / 2);
-        height: calc(86px / 2);
+        width: 184px;
+        height: 43px;
 
         top: 406px;
         right: 32px;
@@ -115,9 +253,48 @@
     }
 }
 .chleba {
+    .size300x600 & {
+        width: 101.875px;
+        height: 76.875px;
+
+        top: 285.625px;
+        left: 99.0625px;
+
+        background-image: url('./assets/300x600/chleba.png');
+
+        animation:
+            size300x600-chleba-intro 1.4s ease-out forwards,
+            size300x600-chleba-loop 3.5s 1.4s linear infinite;
+    }
+    .size300x250 & {
+        width: 78.75px;
+        height: 60px;
+
+        top: 88.75px;
+        right: 179.375px;
+
+        background-image: url('./assets/300x250/chleba.png');
+
+        animation:
+            size300x250-chleba-intro 1.4s ease-out forwards,
+            size300x250-chleba-loop 3.5s 1.4s linear infinite;
+    }
+    .size300x300 & {
+        width: 101.875px;
+        height: 76.875px;
+
+        top: 115.625px;
+        right: 172.5px;
+
+        background-image: url('./assets/300x300/chleba.png');
+
+        animation:
+            size300x300-chleba-intro 1.7s ease-out forwards,
+            size300x300-chleba-loop 3.5s 1.7s linear infinite;
+    }
     .size480x300 & {
-        width: calc(252px / 2);
-        height: calc(192px / 2);
+        width: 126px;
+        height: 96px;
 
         top: 92px;
         right: 287px;
@@ -129,8 +306,8 @@
             size480x300-chleba-loop 3.5s 1.4s linear infinite;
     }
     .size480x480 & {
-        width: calc(326px / 2);
-        height: calc(246px / 2);
+        width: 163px;
+        height: 123px;
 
         top: 185px;
         right: 276px;
@@ -143,9 +320,51 @@
     }
 }
 .okurka {
+    .size300x600 & {
+        width: 69.375px;
+        height: 68.125px;
+
+        top: 216.25px;
+        left: 115.3125px;
+
+        // 20deg proti smeru rucicek; samostatna vlastnost, aby se neprepsala animaci
+        rotate: -20deg;
+
+        background-image: url('./assets/300x600/okurka.png');
+
+        animation:
+            size300x600-okurka-intro 1.2s ease-out forwards,
+            size300x600-okurka-loop 2.6s 1.2s linear infinite;
+    }
+    .size300x250 & {
+        width: 56.875px;
+        height: 50.625px;
+
+        top: 44.375px;
+        right: 180.625px;
+
+        background-image: url('./assets/300x250/okurka.png');
+
+        animation:
+            size300x250-okurka-intro 1s ease-out forwards,
+            size300x250-okurka-loop 2.6s 1s linear infinite;
+    }
+    .size300x300 & {
+        width: 69.375px;
+        height: 68.125px;
+
+        top: 56.25px;
+        right: 164.375px;
+
+        background-image: url('./assets/300x300/okurka.png');
+
+        animation:
+            size300x300-okurka-intro 1s ease-out forwards,
+            size300x300-okurka-loop 2.6s 1s linear infinite;
+    }
     .size480x300 & {
-        width: calc(182px / 2);
-        height: calc(162px / 2);
+        width: 91px;
+        height: 81px;
 
         top: 21px;
         right: 273px;
@@ -157,8 +376,8 @@
             size480x300-okurka-loop 2.6s 1s linear infinite;
     }
     .size480x480 & {
-        width: calc(222px / 2);
-        height: calc(218px / 2);
+        width: 111px;
+        height: 109px;
 
         top: 90px;
         right: 263px;
@@ -171,9 +390,51 @@
     }
 }
 .rajce {
+    .size300x600 & {
+        width: 84.375px;
+        height: 53.75px;
+
+        top: 261.875px;
+        left: 107.8125px;
+
+        // 10deg proti smeru rucicek
+        rotate: -10deg;
+
+        background-image: url('./assets/300x600/rajce.png');
+
+        animation:
+            size300x600-rajce-intro 1.3s ease-out forwards,
+            size300x600-rajce-loop 2.9s 1.3s linear infinite;
+    }
+    .size300x250 & {
+        width: 65px;
+        height: 41.875px;
+
+        top: 76.875px;
+        right: 176.25px;
+
+        background-image: url('./assets/300x250/rajce.png');
+
+        animation:
+            size300x250-rajce-intro 1.2s ease-out forwards,
+            size300x250-rajce-loop 2.9s 1.2s linear infinite;
+    }
+    .size300x300 & {
+        width: 84.375px;
+        height: 53.75px;
+
+        top: 101.875px;
+        right: 156.875px;
+
+        background-image: url('./assets/300x300/rajce.png');
+
+        animation:
+            size300x300-rajce-intro 1.2s ease-out forwards,
+            size300x300-rajce-loop 2.9s 1.2s linear infinite;
+    }
     .size480x300 & {
-        width: calc(208px / 2);
-        height: calc(134px / 2);
+        width: 104px;
+        height: 67px;
 
         top: 73px;
         right: 266px;
@@ -185,8 +446,8 @@
             size480x300-rajce-loop 2.9s 1.2s linear infinite;
     }
     .size480x480 & {
-        width: calc(270px / 2);
-        height: calc(172px / 2);
+        width: 135px;
+        height: 86px;
 
         top: 163px;
         right: 251px;
@@ -199,9 +460,74 @@
     }
 }
 .syr {
+    .size300x600 & {
+        // o 10% vetsi (91.875 a 95 * 1.1)
+        width: 101.0625px;
+        height: 104.5px;
+
+        // vycentrovany horizontalne ((300-101.0625)/2), nahore pod snackuj
+        top: 130px;
+        left: 99.46875px;
+
+        animation:
+            size300x600-syr-intro 1.1s linear forwards,
+            size300x600-syr-loop 3.2s 1.1s linear infinite;
+    }
+    .size300x600.plain & {
+        background-image: url('./assets/300x600/syr-plain.png');
+    }
+    .size300x600.sunka & {
+        background-image: url('./assets/300x600/syr-sunka.png');
+    }
+    .size300x600.emental & {
+        background-image: url('./assets/300x600/syr-emental.png');
+    }
+
+    .size300x250 & {
+        width: 82.6px;
+        height: 81.2px;
+
+        top: 118px;
+        right: 59px;
+
+        animation:
+            size300x250-syr-intro 1.5s linear forwards,
+            size300x250-syr-loop 3.2s 1.5s linear infinite;
+    }
+    .size300x250.plain & {
+        background-image: url('./assets/300x250/syr-plain.png');
+    }
+    .size300x250.sunka & {
+        background-image: url('./assets/300x250/syr-sunka.png');
+    }
+    .size300x250.emental & {
+        background-image: url('./assets/300x250/syr-emental.png');
+    }
+
+    .size300x300 & {
+        width: 91.875px;
+        height: 95px;
+
+        top: 145.625px;
+        right: 43.125px;
+
+        animation:
+            size300x300-syr-intro 1.5s linear forwards,
+            size300x300-syr-loop 3.2s 1.5s linear infinite;
+    }
+    .size300x300.plain & {
+        background-image: url('./assets/300x300/syr-plain.png');
+    }
+    .size300x300.sunka & {
+        background-image: url('./assets/300x300/syr-sunka.png');
+    }
+    .size300x300.emental & {
+        background-image: url('./assets/300x300/syr-emental.png');
+    }
+
     .size480x300 & {
-        width: calc(236px / 2);
-        height: calc(232px / 2);
+        width: 118px;
+        height: 116px;
 
         top: 117px;
         right: 128px;
@@ -221,8 +547,8 @@
     }
 
     .size480x480 & {
-        width: calc(294px / 2);
-        height: calc(304px / 2);
+        width: 147px;
+        height: 152px;
 
         top: 233px;
         right: 69px;
@@ -242,9 +568,48 @@
     }
 }
 .voda {
+    .size300x600 & {
+        width: 138.75px;
+        height: 118.125px;
+
+        top: 231.25px;
+        left: 80.625px;
+
+        background-image: url('./assets/300x600/voda.png');
+
+        animation:
+            size300x600-voda-intro 1.5s ease-out forwards,
+            size300x600-voda-loop 3.1s 1.5s linear infinite;
+    }
+    .size300x250 & {
+        width: 106.875px;
+        height: 91.25px;
+
+        top: 57.5px;
+        right: 164.375px;
+
+        background-image: url('./assets/300x250/voda.png');
+
+        animation:
+            size300x250-voda-intro 1.9s ease-out forwards,
+            size300x250-voda-loop 3.1s 1.9s linear infinite;
+    }
+    .size300x300 & {
+        width: 138.75px;
+        height: 118.125px;
+
+        top: 71.25px;
+        right: 134.375px;
+
+        background-image: url('./assets/300x300/voda.png');
+
+        animation:
+            size300x300-voda-intro 1.9s ease-out forwards,
+            size300x300-voda-loop 3.1s 1.9s linear infinite;
+    }
     .size480x300 & {
-        width: calc(342px / 2);
-        height: calc(292px / 2);
+        width: 171px;
+        height: 146px;
 
         top: 42px;
         right: 247px;
@@ -256,8 +621,8 @@
             size480x300-voda-loop 3.1s 1.9s linear infinite;
     }
     .size480x480 & {
-        width: calc(444px / 2);
-        height: calc(378px / 2);
+        width: 222px;
+        height: 189px;
 
         top: 114px;
         right: 215px;
@@ -270,9 +635,48 @@
     }
 }
 .drobky {
+    .size300x600 & {
+        width: 170px;
+        height: 115px;
+
+        top: 217.5px;
+        left: 65px;
+
+        background-image: url('./assets/300x600/drobky.png');
+
+        animation:
+            size300x600-drobky-intro 1.5s ease-out forwards,
+            size300x600-drobky-loop 3.7s 1.5s linear infinite;
+    }
+    .size300x250 & {
+        width: 140.625px;
+        height: 88.75px;
+
+        top: 50px;
+        right: 142.5px;
+
+        background-image: url('./assets/300x250/drobky.png');
+
+        animation:
+            size300x250-drobky-intro 2.1s ease-out forwards,
+            size300x250-drobky-loop 3.7s 2.1s linear infinite;
+    }
+    .size300x300 & {
+        width: 170px;
+        height: 115px;
+
+        top: 57.5px;
+        right: 108.125px;
+
+        background-image: url('./assets/300x300/drobky.png');
+
+        animation:
+            size300x300-drobky-intro 2.1s ease-out forwards,
+            size300x300-drobky-loop 3.7s 2.1s linear infinite;
+    }
     .size480x300 & {
-        width: calc(450px / 2);
-        height: calc(284px / 2);
+        width: 225px;
+        height: 142px;
 
         top: 30px;
         right: 212px;
@@ -284,8 +688,8 @@
             size480x300-drobky-loop 3.7s 2.1s linear infinite;
     }
     .size480x480 & {
-        width: calc(544px / 2);
-        height: calc(368px / 2);
+        width: 272px;
+        height: 184px;
 
         top: 92px;
         right: 173px;
@@ -300,6 +704,93 @@
 
 #banner {
     position: relative;
+
+    .size300x600 & {
+        width: 300px;
+        height: 600px;
+    }
+    .size300x600.plain & {
+        background: #82bdf0;
+        background: radial-gradient(
+            circle 300px at 50% 50%,
+            #f1f0e7 0%,
+            #82bdf0 100%
+        );
+    }
+    .size300x600.sunka & {
+        background: #f3b1c0;
+        background: radial-gradient(
+            circle 300px at 50% 50%,
+            #f1f0e7 0%,
+            #f3b1c0 100%
+        );
+    }
+    .size300x600.emental & {
+        background: #f1c67f;
+        background: radial-gradient(
+            circle 300px at 50% 50%,
+            #f1f0e7 0%,
+            #f1c67f 100%
+        );
+    }
+
+    .size300x250 & {
+        width: 300px;
+        height: 250px;
+    }
+    .size300x250.plain & {
+        background: #a7d0f3;
+        background: radial-gradient(
+            circle 147.5px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #a7d0f3 100%
+        );
+    }
+    .size300x250.sunka & {
+        background: #f2a4b9;
+        background: radial-gradient(
+            circle 147.5px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #f2a4b9 100%
+        );
+    }
+    .size300x250.emental & {
+        background: #f0be6b;
+        background: radial-gradient(
+            circle 147.5px at 47.4% 50.5%,
+            #f1f0e7 0%,
+            #f0be6b 100%
+        );
+    }
+
+    .size300x300 & {
+        width: 300px;
+        height: 300px;
+    }
+    .size300x300.plain & {
+        background: #82bdf0;
+        background: radial-gradient(
+            circle 306px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #82bdf0 100%
+        );
+    }
+    .size300x300.sunka & {
+        background: #f3b1c0;
+        background: radial-gradient(
+            circle 306px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #f3b1c0 100%
+        );
+    }
+    .size300x300.emental & {
+        background: #f1c67f;
+        background: radial-gradient(
+            circle 306px at 51.6% 45.0%,
+            #f1f0e7 0%,
+            #f1c67f 100%
+        );
+    }
 
     .size480x300 & {
         width: 480px;

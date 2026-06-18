@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "sass src/style.scss src/style.css --style=expanded --no-source-map",
+    "build": "sass src/style.scss src/style.css --style=compressed --no-source-map",
     "watch": "sass --watch src/style.scss src/style.css --style=expanded --no-source-map"
   },
   "devDependencies": {
+    "purgecss": "^8.0.0",
     "sass": "^1.77.0"
   }
 }

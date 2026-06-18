@@ -1,0 +1,286 @@
+@keyframes size300x600-button-pulse {
+    0% {
+        transform: scale(1);
+    }
+    4% {
+        transform: scale(1.1);
+    }
+    8% {
+        transform: scale(1);
+    }
+    12% {
+        transform: scale(1.1);
+    }
+    17% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes size300x600-chleba-intro {
+    0% {
+        transform: translate(0, 121.9375px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-chleba-loop {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-3px, 2px);
+    }
+    37.5% {
+        transform: translate(-6px, 1px);
+    }
+    50% {
+        transform: translate(-6px, 0);
+    }
+    62.5% {
+        transform: translate(-6px, -1px);
+    }
+    75% {
+        transform: translate(-3px, -2px);
+    }
+    87.5% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-okurka-intro {
+    0% {
+        transform: translate(-20px, 195.6875px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-okurka-loop {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-2px, 2px);
+    }
+    37.5% {
+        transform: translate(-3px, 1px);
+    }
+    50% {
+        transform: translate(-4px, 0);
+    }
+    62.5% {
+        transform: translate(-3px, -1px);
+    }
+    75% {
+        transform: translate(-2px, -2px);
+    }
+    87.5% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-rajce-intro {
+    0% {
+        transform: translate(0, 157.25px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-rajce-loop {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-2px, 2px);
+    }
+    37.5% {
+        transform: translate(-3px, 1px);
+    }
+    50% {
+        transform: translate(-4px, 0);
+    }
+    62.5% {
+        transform: translate(-3px, -1px);
+    }
+    75% {
+        transform: translate(-2px, -2px);
+    }
+    87.5% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-syr-intro {
+    // ease-out (rychle -> pomalu) zapeceny do Y/scale: p = 1-(1-t)^2, Y = 233.75*(1-p).
+    // X = -20*sin(pi*p) -> vybouleni doleva symetricke podle UJETE VZDALENOSTI,
+    // takze vrchol -20px je v geometrickem stredu cesty (ne v polovine casu).
+    // Animace bezi linear, cela krivka je v techto hodnotach. Start i konec X=0.
+    0% {
+        // o 30px vyse nez ostatni (263.75 - 30)
+        transform: translate(0, 233.75px) scale(0.5);
+    }
+    10% {
+        transform: translate(-11.2px, 189.34px) scale(0.595);
+    }
+    20% {
+        transform: translate(-18.1px, 149.6px) scale(0.68);
+    }
+    30% {
+        transform: translate(-20px, 114.54px) scale(0.755);
+    }
+    40% {
+        transform: translate(-18.1px, 84.15px) scale(0.82);
+    }
+    50% {
+        transform: translate(-14.14px, 58.44px) scale(0.875);
+    }
+    60% {
+        transform: translate(-9.6px, 37.4px) scale(0.92);
+    }
+    70% {
+        transform: translate(-5.6px, 21.04px) scale(0.955);
+    }
+    80% {
+        transform: translate(-2.5px, 9.35px) scale(0.98);
+    }
+    90% {
+        transform: translate(-0.6px, 2.34px) scale(0.995);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes size300x600-syr-loop {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    12.5% {
+        transform: translate(-1px, 3px) scale(1);
+    }
+    25% {
+        transform: translate(-4px, 4px) scale(1);
+    }
+    37.5% {
+        transform: translate(-6px, 3px) scale(1);
+    }
+    50% {
+        transform: translate(-8px, 0) scale(1);
+    }
+    62.5% {
+        transform: translate(-6px, -3px) scale(1);
+    }
+    75% {
+        transform: translate(-4px, -4px) scale(1);
+    }
+    87.5% {
+        transform: translate(-1px, -3px) scale(1);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes size300x600-voda-intro {
+    0% {
+        transform: translate(0, 155.6875px) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes size300x600-voda-loop {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-2px, 2px);
+    }
+    37.5% {
+        transform: translate(-3px, 1px);
+    }
+    50% {
+        transform: translate(-4px, 0);
+    }
+    62.5% {
+        transform: translate(-3px, -1px);
+    }
+    75% {
+        transform: translate(-2px, -2px);
+    }
+    87.5% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes size300x600-drobky-intro {
+    0% {
+        transform: translate(0, 171px) scale(0.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+@keyframes size300x600-drobky-loop {
+    0% {
+        transform: translate(0, 0);
+    }
+    12.5% {
+        transform: translate(-1px, 1px);
+    }
+    25% {
+        transform: translate(-2px, 2px);
+    }
+    37.5% {
+        transform: translate(-3px, 1px);
+    }
+    50% {
+        transform: translate(-4px, 0);
+    }
+    62.5% {
+        transform: translate(-3px, -1px);
+    }
+    75% {
+        transform: translate(-2px, -2px);
+    }
+    87.5% {
+        transform: translate(-1px, -1px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
