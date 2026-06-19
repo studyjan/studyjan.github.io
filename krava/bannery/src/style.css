@@ -1898,94 +1898,96 @@
 
 #banner {
   position: relative;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
 }
-.size300x600 #banner {
+#banner.size300x600 {
   width: 300px;
   height: 600px;
 }
-.size300x600.plain #banner {
+#banner.size300x600.plain {
   background: #82bdf0;
   background: radial-gradient(circle 300px at 50% 50%, #f1f0e7 0%, #82bdf0 100%);
 }
-.size300x600.sunka #banner {
+#banner.size300x600.sunka {
   background: #f3b1c0;
   background: radial-gradient(circle 300px at 50% 50%, #f1f0e7 0%, #f3b1c0 100%);
 }
-.size300x600.emental #banner {
+#banner.size300x600.emental {
   background: #f1c67f;
   background: radial-gradient(circle 300px at 50% 50%, #f1f0e7 0%, #f1c67f 100%);
 }
-.size300x250 #banner {
+#banner.size300x250 {
   width: 300px;
   height: 250px;
 }
-.size300x250.plain #banner {
+#banner.size300x250.plain {
   background: #a7d0f3;
   background: radial-gradient(circle 147.5px at 47.4% 50.5%, #f1f0e7 0%, #a7d0f3 100%);
 }
-.size300x250.sunka #banner {
+#banner.size300x250.sunka {
   background: #f2a4b9;
   background: radial-gradient(circle 147.5px at 47.4% 50.5%, #f1f0e7 0%, #f2a4b9 100%);
 }
-.size300x250.emental #banner {
+#banner.size300x250.emental {
   background: #f0be6b;
   background: radial-gradient(circle 147.5px at 47.4% 50.5%, #f1f0e7 0%, #f0be6b 100%);
 }
-.size300x300 #banner {
+#banner.size300x300 {
   width: 300px;
   height: 300px;
 }
-.size300x300.plain #banner {
+#banner.size300x300.plain {
   background: #82bdf0;
   background: radial-gradient(circle 306px at 51.6% 45%, #f1f0e7 0%, #82bdf0 100%);
 }
-.size300x300.sunka #banner {
+#banner.size300x300.sunka {
   background: #f3b1c0;
   background: radial-gradient(circle 306px at 51.6% 45%, #f1f0e7 0%, #f3b1c0 100%);
 }
-.size300x300.emental #banner {
+#banner.size300x300.emental {
   background: #f1c67f;
   background: radial-gradient(circle 306px at 51.6% 45%, #f1f0e7 0%, #f1c67f 100%);
 }
-.size480x300 #banner {
+#banner.size480x300 {
   width: 480px;
   height: 300px;
 }
-.size480x300.plain #banner {
+#banner.size480x300.plain {
   background: #a7d0f3;
   background: radial-gradient(circle 236px at 47.4% 50.5%, #f1f0e7 0%, #a7d0f3 100%);
 }
-.size480x300.sunka #banner {
+#banner.size480x300.sunka {
   background: #f2a4b9;
   background: radial-gradient(circle 236px at 47.4% 50.5%, #f1f0e7 0%, #f2a4b9 100%);
 }
-.size480x300.emental #banner {
+#banner.size480x300.emental {
   background: #f0be6b;
   background: radial-gradient(circle 236px at 47.4% 50.5%, #f1f0e7 0%, #f0be6b 100%);
 }
-.size480x480 #banner {
+#banner.size480x480 {
   width: 480px;
   height: 480px;
 }
-.size480x480.plain #banner {
+#banner.size480x480.plain {
   background: #82bdf0;
   background: radial-gradient(circle 490px at 51.6% 45%, #f1f0e7 0%, #82bdf0 100%);
 }
-.size480x480.sunka #banner {
+#banner.size480x480.sunka {
   background: #f3b1c0;
   background: radial-gradient(circle 490px at 51.6% 45%, #f1f0e7 0%, #f3b1c0 100%);
 }
-.size480x480.emental #banner {
+#banner.size480x480.emental {
   background: #f1c67f;
   background: radial-gradient(circle 490px at 51.6% 45%, #f1f0e7 0%, #f1c67f 100%);
 }
 
-body {
+html, body {
   position: relative;
-  height: 100vh;
   margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
 }

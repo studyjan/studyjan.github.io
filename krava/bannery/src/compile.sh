@@ -41,7 +41,7 @@ for filename in ./banner-*.html; do
 
     pkgdir="$basename"
     rm -rf "$pkgdir"
-    mkdir -p "$pkgdir/assets/$size"
+    mkdir -p "$pkgdir"
 
     # HTML jako index.html
     cp "$filename" "$pkgdir/index.html"
@@ -51,6 +51,10 @@ for filename in ./banner-*.html; do
     # jejichž třídy/id v HTML reálně jsou; --keyframes navíc zahodí nepoužité animace.
     npx purgecss --css style.css --content "$filename" --keyframes --output "$pkgdir/"
 
+    # Obrázky jdou naplocho do rootu balíčku (vedle index.html) -> v CSS srovnáme cesty
+    # './assets/<size>/foo.png' na './foo.png'.
+    sed -i '' "s#assets/$size/##g" "$pkgdir/style.css"
+
     # Zjisti, jaké .bg-image třídy banner používá, a zkopíruj jen odpovídající obrázky.
     # Sdílené obrázky:        assets/<size>/<trida>.png
     # Variantní obrázky:      assets/<size>/<trida>-<variant>.png
@@ -59,10 +63,10 @@ for filename in ./banner-*.html; do
         shared="assets/$size/$cls.png"
         variant_img="assets/$size/$cls-$variant.png"
         if [[ -f "$shared" ]]; then
-            optimize_png "$shared" "$pkgdir/assets/$size/$cls.png"
+            optimize_png "$shared" "$pkgdir/$cls.png"
             echo "    + $shared"
         elif [[ -f "$variant_img" ]]; then
-            optimize_png "$variant_img" "$pkgdir/assets/$size/$cls-$variant.png"
+            optimize_png "$variant_img" "$pkgdir/$cls-$variant.png"
             echo "    + $variant_img"
         else
             echo "    ! chybí obrázek pro třídu '$cls' (size $size, variant $variant)"
@@ -82,7 +86,48 @@ EOF
     zip -rq "$basename.zip" "$pkgdir"
     rm -rf "$pkgdir"
     mv "$basename.zip" export/
+
+    # Zip zase rozbal do exportu (vedle .zip) pro náhled obsahu.
+    rm -rf "export/$basename"
+    unzip -oq "export/$basename.zip" -d export/
 done
 
+# Rozcestník: index.html s abecedně seřazenými odkazy na všechny balíčky.
+{
+    cat <<'EOF'
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vesela krava – bannery ke stažení</title>
+    <style>
+        body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2rem auto; padding: 0 1rem; }
+        h1 { font-size: 1.4rem; }
+        ul { list-style: none; padding: 0; }
+        li { margin: .25rem 0; }
+        a { text-decoration: none; color: #06c; }
+        a:hover { text-decoration: underline; }
+        a.preview { text-decoration: none; margin-left: .4rem; }
+    </style>
+</head>
+
+<body>
+    <h1>vesela krava – bannery ke stažení</h1>
+    <ul>
+EOF
+    for zipfile in $(ls export/*.zip 2>/dev/null | xargs -n1 basename | sort); do
+        name="${zipfile%.zip}"
+        echo "        <li><a href=\"$zipfile\">$zipfile</a> <a href=\"$name/index.html\" class=\"preview\" title=\"Náhled\">🔍</a></li>"
+    done
+    cat <<'EOF'
+    </ul>
+</body>
+
+</html>
+EOF
+} > export/index.html
+
 echo
-echo "Hotovo. Balíčky najdeš v ./export/"
+echo "Hotovo. Balíčky a rozcestník (index.html) najdeš v ./export/"

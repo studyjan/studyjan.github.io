@@ -1,0 +1,395 @@
+@keyframes size480x480-button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  4% {
+    transform: scale(1.1);
+  }
+  8% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.1);
+  }
+  17% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes size480x480-chleba-intro {
+  0% {
+    transform: translate(14px, 124px);
+  }
+  20% {
+    transform: translate(14px, 124px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-chleba-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-5px, 3px);
+  }
+  37.5% {
+    transform: translate(-9px, 2px);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  62.5% {
+    transform: translate(-9px, -2px);
+  }
+  75% {
+    transform: translate(-5px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-okurka-intro {
+  0% {
+    transform: translate(-9px, 166px);
+  }
+  20% {
+    transform: translate(-9px, 166px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-okurka-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-rajce-intro {
+  0% {
+    transform: translate(-29px, 143px);
+  }
+  20% {
+    transform: translate(-29px, 143px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-rajce-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-syr-intro {
+  0% {
+    transform: translate(-170px, 30px) scale(0.5);
+  }
+  10% {
+    transform: translate(-153px, 20px) scale(0.5);
+  }
+  20% {
+    transform: translate(-136px, 10px) scale(0.5);
+  }
+  30% {
+    transform: translate(-119px, 2px) scale(0.571);
+  }
+  40% {
+    transform: translate(-102px, -4px) scale(0.643);
+  }
+  50% {
+    transform: translate(-85px, -8px) scale(0.714);
+  }
+  60% {
+    transform: translate(-68px, -10px) scale(0.786);
+  }
+  70% {
+    transform: translate(-51px, -10px) scale(0.857);
+  }
+  80% {
+    transform: translate(-34px, -8px) scale(0.929);
+  }
+  90% {
+    transform: translate(-17px, -4px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x480-syr-loop {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  12.5% {
+    transform: translate(-2px, 4px) scale(1);
+  }
+  25% {
+    transform: translate(-6px, 6px) scale(1);
+  }
+  37.5% {
+    transform: translate(-10px, 4px) scale(1);
+  }
+  50% {
+    transform: translate(-12px, 0) scale(1);
+  }
+  62.5% {
+    transform: translate(-10px, -4px) scale(1);
+  }
+  75% {
+    transform: translate(-6px, -6px) scale(1);
+  }
+  87.5% {
+    transform: translate(-2px, -4px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x480-voda-intro {
+  0% {
+    transform: translate(-9px, 166px) scale(0.5);
+  }
+  20% {
+    transform: translate(-9px, 166px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x480-voda-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x480-drobky-intro {
+  0% {
+    transform: translate(-9px, 166px) scale(0.5);
+  }
+  20% {
+    transform: translate(-9px, 166px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x480-drobky-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.size480x480 .product {
+  width: 209px;
+  height: 217px;
+  bottom: 21px;
+  left: 32px;
+}
+.size480x480.sunka .product {
+  background-image: url("./product-sunka.png");
+}
+.size480x480 .snackuj {
+  width: 314px;
+  height: 203px;
+  top: 25px;
+  right: 27px;
+}
+.size480x480.sunka .snackuj {
+  background-image: url("./snackuj-sunka.png");
+}
+
+.button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.size480x480 .button {
+  width: 184px;
+  height: 43px;
+  top: 406px;
+  right: 32px;
+  background-image: url("./button.png");
+  animation: size480x480-button-pulse 6.5s ease-in-out 4s infinite;
+}
+.size480x480 .chleba {
+  width: 163px;
+  height: 123px;
+  top: 185px;
+  right: 276px;
+  background-image: url("./chleba.png");
+  animation: size480x480-chleba-intro 1.7s ease-out forwards, size480x480-chleba-loop 3.5s 1.7s linear infinite;
+}
+.size480x480 .okurka {
+  width: 111px;
+  height: 109px;
+  top: 90px;
+  right: 263px;
+  background-image: url("./okurka.png");
+  animation: size480x480-okurka-intro 1s ease-out forwards, size480x480-okurka-loop 2.6s 1s linear infinite;
+}
+.size480x480 .rajce {
+  width: 135px;
+  height: 86px;
+  top: 163px;
+  right: 251px;
+  background-image: url("./rajce.png");
+  animation: size480x480-rajce-intro 1.2s ease-out forwards, size480x480-rajce-loop 2.9s 1.2s linear infinite;
+}
+.size480x480 .syr {
+  width: 147px;
+  height: 152px;
+  top: 233px;
+  right: 69px;
+  animation: size480x480-syr-intro 1.5s linear forwards, size480x480-syr-loop 3.2s 1.5s linear infinite;
+}
+.size480x480.sunka .syr {
+  background-image: url("./syr-sunka.png");
+}
+.size480x480 .voda {
+  width: 222px;
+  height: 189px;
+  top: 114px;
+  right: 215px;
+  background-image: url("./voda.png");
+  animation: size480x480-voda-intro 1.9s ease-out forwards, size480x480-voda-loop 3.1s 1.9s linear infinite;
+}
+.size480x480 .drobky {
+  width: 272px;
+  height: 184px;
+  top: 92px;
+  right: 173px;
+  background-image: url("./drobky.png");
+  animation: size480x480-drobky-intro 2.1s ease-out forwards, size480x480-drobky-loop 3.7s 2.1s linear infinite;
+}
+
+#banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+}
+#banner.size480x480 {
+  width: 480px;
+  height: 480px;
+}
+#banner.size480x480.sunka {
+  background: #f3b1c0;
+  background: radial-gradient(circle 490px at 51.6% 45%, #f1f0e7 0%, #f3b1c0 100%);
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}

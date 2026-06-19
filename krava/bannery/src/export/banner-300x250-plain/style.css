@@ -1,0 +1,397 @@
+@keyframes size300x250-button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  4% {
+    transform: scale(1.1);
+  }
+  8% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.1);
+  }
+  17% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes size300x250-chleba-intro {
+  0% {
+    transform: translate(-17px, 59px);
+  }
+  20% {
+    transform: translate(-17px, 59px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-chleba-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-3px, 2px);
+  }
+  37.5% {
+    transform: translate(-6px, 1px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-6px, -1px);
+  }
+  75% {
+    transform: translate(-3px, -2px);
+  }
+  87.5% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-okurka-intro {
+  0% {
+    transform: translate(-21px, 85px);
+  }
+  20% {
+    transform: translate(-21px, 85px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-okurka-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  37.5% {
+    transform: translate(-3px, 1px);
+  }
+  50% {
+    transform: translate(-4px, 0);
+  }
+  62.5% {
+    transform: translate(-3px, -1px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  87.5% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-rajce-intro {
+  0% {
+    transform: translate(-34px, 71px);
+  }
+  20% {
+    transform: translate(-34px, 71px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-rajce-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  37.5% {
+    transform: translate(-3px, 1px);
+  }
+  50% {
+    transform: translate(-4px, 0);
+  }
+  62.5% {
+    transform: translate(-3px, -1px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  87.5% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-syr-intro {
+  0% {
+    transform: translate(-106px, 29px) scale(0.5);
+  }
+  10% {
+    transform: translate(-96px, 22px) scale(0.5);
+  }
+  20% {
+    transform: translate(-85px, 14px) scale(0.5);
+  }
+  30% {
+    transform: translate(-74px, 8px) scale(0.571);
+  }
+  40% {
+    transform: translate(-64px, 3px) scale(0.643);
+  }
+  50% {
+    transform: translate(-53px, 0px) scale(0.714);
+  }
+  60% {
+    transform: translate(-43px, -2px) scale(0.786);
+  }
+  70% {
+    transform: translate(-32px, -3px) scale(0.857);
+  }
+  80% {
+    transform: translate(-21px, -3px) scale(0.929);
+  }
+  90% {
+    transform: translate(-11px, -2px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size300x250-syr-loop {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  12.5% {
+    transform: translate(-1px, 3px) scale(1);
+  }
+  25% {
+    transform: translate(-4px, 4px) scale(1);
+  }
+  37.5% {
+    transform: translate(-6px, 3px) scale(1);
+  }
+  50% {
+    transform: translate(-8px, 0) scale(1);
+  }
+  62.5% {
+    transform: translate(-6px, -3px) scale(1);
+  }
+  75% {
+    transform: translate(-4px, -4px) scale(1);
+  }
+  87.5% {
+    transform: translate(-1px, -3px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size300x250-voda-intro {
+  0% {
+    transform: translate(-31px, 85px) scale(0.5);
+  }
+  20% {
+    transform: translate(-31px, 85px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size300x250-voda-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  37.5% {
+    transform: translate(-3px, 1px);
+  }
+  50% {
+    transform: translate(-4px, 0);
+  }
+  62.5% {
+    transform: translate(-3px, -1px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  87.5% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size300x250-drobky-intro {
+  0% {
+    transform: translate(-31px, 85px) scale(0.5);
+  }
+  20% {
+    transform: translate(-31px, 85px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size300x250-drobky-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-2px, 2px);
+  }
+  37.5% {
+    transform: translate(-3px, 1px);
+  }
+  50% {
+    transform: translate(-4px, 0);
+  }
+  62.5% {
+    transform: translate(-3px, -1px);
+  }
+  75% {
+    transform: translate(-2px, -2px);
+  }
+  87.5% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.size300x250 .product {
+  width: 111.3px;
+  height: 117.6px;
+  bottom: 10px;
+  left: 15px;
+}
+.size300x250.plain .product {
+  background-image: url("./product-plain.png");
+  width: 113.4px;
+  height: 119.7px;
+}
+.size300x250 .snackuj {
+  width: 196px;
+  height: 126.4px;
+  top: 15.625px;
+  right: 16.875px;
+}
+.size300x250.plain .snackuj {
+  background-image: url("./snackuj-plain.png");
+}
+
+.button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.size300x250 .button {
+  width: 115px;
+  height: 26.875px;
+  bottom: 19.375px;
+  right: 20px;
+  background-image: url("./button.png");
+  animation: size300x250-button-pulse 6.5s ease-in-out 4s infinite;
+}
+.size300x250 .chleba {
+  width: 78.75px;
+  height: 60px;
+  top: 88.75px;
+  right: 179.375px;
+  background-image: url("./chleba.png");
+  animation: size300x250-chleba-intro 1.4s ease-out forwards, size300x250-chleba-loop 3.5s 1.4s linear infinite;
+}
+.size300x250 .okurka {
+  width: 56.875px;
+  height: 50.625px;
+  top: 44.375px;
+  right: 180.625px;
+  background-image: url("./okurka.png");
+  animation: size300x250-okurka-intro 1s ease-out forwards, size300x250-okurka-loop 2.6s 1s linear infinite;
+}
+.size300x250 .rajce {
+  width: 65px;
+  height: 41.875px;
+  top: 76.875px;
+  right: 176.25px;
+  background-image: url("./rajce.png");
+  animation: size300x250-rajce-intro 1.2s ease-out forwards, size300x250-rajce-loop 2.9s 1.2s linear infinite;
+}
+.size300x250 .syr {
+  width: 82.6px;
+  height: 81.2px;
+  top: 118px;
+  right: 59px;
+  animation: size300x250-syr-intro 1.5s linear forwards, size300x250-syr-loop 3.2s 1.5s linear infinite;
+}
+.size300x250.plain .syr {
+  background-image: url("./syr-plain.png");
+}
+.size300x250 .voda {
+  width: 106.875px;
+  height: 91.25px;
+  top: 57.5px;
+  right: 164.375px;
+  background-image: url("./voda.png");
+  animation: size300x250-voda-intro 1.9s ease-out forwards, size300x250-voda-loop 3.1s 1.9s linear infinite;
+}
+.size300x250 .drobky {
+  width: 140.625px;
+  height: 88.75px;
+  top: 50px;
+  right: 142.5px;
+  background-image: url("./drobky.png");
+  animation: size300x250-drobky-intro 2.1s ease-out forwards, size300x250-drobky-loop 3.7s 2.1s linear infinite;
+}
+
+#banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+}
+#banner.size300x250 {
+  width: 300px;
+  height: 250px;
+}
+#banner.size300x250.plain {
+  background: #a7d0f3;
+  background: radial-gradient(circle 147.5px at 47.4% 50.5%, #f1f0e7 0%, #a7d0f3 100%);
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}

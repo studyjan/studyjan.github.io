@@ -1,0 +1,395 @@
+@keyframes size480x300-button-pulse {
+  0% {
+    transform: scale(1);
+  }
+  4% {
+    transform: scale(1.1);
+  }
+  8% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.1);
+  }
+  17% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes size480x300-chleba-intro {
+  0% {
+    transform: translate(-27px, 78px);
+  }
+  20% {
+    transform: translate(-27px, 78px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-chleba-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-5px, 3px);
+  }
+  37.5% {
+    transform: translate(-9px, 2px);
+  }
+  50% {
+    transform: translate(-10px, 0);
+  }
+  62.5% {
+    transform: translate(-9px, -2px);
+  }
+  75% {
+    transform: translate(-5px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-okurka-intro {
+  0% {
+    transform: translate(-50px, 120px);
+  }
+  20% {
+    transform: translate(-50px, 120px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-okurka-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-rajce-intro {
+  0% {
+    transform: translate(-70px, 97px);
+  }
+  20% {
+    transform: translate(-70px, 97px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-rajce-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-syr-intro {
+  0% {
+    transform: translate(-170px, 30px) scale(0.5);
+  }
+  10% {
+    transform: translate(-153px, 20px) scale(0.5);
+  }
+  20% {
+    transform: translate(-136px, 10px) scale(0.5);
+  }
+  30% {
+    transform: translate(-119px, 2px) scale(0.571);
+  }
+  40% {
+    transform: translate(-102px, -4px) scale(0.643);
+  }
+  50% {
+    transform: translate(-85px, -8px) scale(0.714);
+  }
+  60% {
+    transform: translate(-68px, -10px) scale(0.786);
+  }
+  70% {
+    transform: translate(-51px, -10px) scale(0.857);
+  }
+  80% {
+    transform: translate(-34px, -8px) scale(0.929);
+  }
+  90% {
+    transform: translate(-17px, -4px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x300-syr-loop {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  12.5% {
+    transform: translate(-2px, 4px) scale(1);
+  }
+  25% {
+    transform: translate(-6px, 6px) scale(1);
+  }
+  37.5% {
+    transform: translate(-10px, 4px) scale(1);
+  }
+  50% {
+    transform: translate(-12px, 0) scale(1);
+  }
+  62.5% {
+    transform: translate(-10px, -4px) scale(1);
+  }
+  75% {
+    transform: translate(-6px, -6px) scale(1);
+  }
+  87.5% {
+    transform: translate(-2px, -4px) scale(1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x300-voda-intro {
+  0% {
+    transform: translate(-50px, 120px) scale(0.5);
+  }
+  20% {
+    transform: translate(-50px, 120px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x300-voda-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes size480x300-drobky-intro {
+  0% {
+    transform: translate(-50px, 120px) scale(0.5);
+  }
+  20% {
+    transform: translate(-50px, 120px) scale(0.5);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+@keyframes size480x300-drobky-loop {
+  0% {
+    transform: translate(0, 0);
+  }
+  12.5% {
+    transform: translate(-1px, 2px);
+  }
+  25% {
+    transform: translate(-3px, 3px);
+  }
+  37.5% {
+    transform: translate(-5px, 2px);
+  }
+  50% {
+    transform: translate(-6px, 0);
+  }
+  62.5% {
+    transform: translate(-5px, -2px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  87.5% {
+    transform: translate(-1px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+.size480x300 .product {
+  width: 159px;
+  height: 168px;
+  bottom: 9px;
+  left: 28px;
+}
+.size480x300.emental .product {
+  background-image: url("./product-emental.png");
+}
+.size480x300 .snackuj {
+  width: 245px;
+  height: 158px;
+  top: 15px;
+  right: 21px;
+}
+.size480x300.emental .snackuj {
+  background-image: url("./snackuj-emental.png");
+}
+
+.button, .chleba, .okurka, .rajce, .syr, .voda, .drobky {
+  transform-origin: center;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.size480x300 .button {
+  width: 142px;
+  height: 34px;
+  top: 241px;
+  right: 24px;
+  background-image: url("./button.png");
+  animation: size480x300-button-pulse 6.5s ease-in-out 4s infinite;
+}
+.size480x300 .chleba {
+  width: 126px;
+  height: 96px;
+  top: 92px;
+  right: 287px;
+  background-image: url("./chleba.png");
+  animation: size480x300-chleba-intro 1.4s ease-out forwards, size480x300-chleba-loop 3.5s 1.4s linear infinite;
+}
+.size480x300 .okurka {
+  width: 91px;
+  height: 81px;
+  top: 21px;
+  right: 273px;
+  background-image: url("./okurka.png");
+  animation: size480x300-okurka-intro 1s ease-out forwards, size480x300-okurka-loop 2.6s 1s linear infinite;
+}
+.size480x300 .rajce {
+  width: 104px;
+  height: 67px;
+  top: 73px;
+  right: 266px;
+  background-image: url("./rajce.png");
+  animation: size480x300-rajce-intro 1.2s ease-out forwards, size480x300-rajce-loop 2.9s 1.2s linear infinite;
+}
+.size480x300 .syr {
+  width: 118px;
+  height: 116px;
+  top: 117px;
+  right: 128px;
+  animation: size480x300-syr-intro 1.5s linear forwards, size480x300-syr-loop 3.2s 1.5s linear infinite;
+}
+.size480x300.emental .syr {
+  background-image: url("./syr-emental.png");
+}
+.size480x300 .voda {
+  width: 171px;
+  height: 146px;
+  top: 42px;
+  right: 247px;
+  background-image: url("./voda.png");
+  animation: size480x300-voda-intro 1.9s ease-out forwards, size480x300-voda-loop 3.1s 1.9s linear infinite;
+}
+.size480x300 .drobky {
+  width: 225px;
+  height: 142px;
+  top: 30px;
+  right: 212px;
+  background-image: url("./drobky.png");
+  animation: size480x300-drobky-intro 2.1s ease-out forwards, size480x300-drobky-loop 3.7s 2.1s linear infinite;
+}
+
+#banner {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  color: #000;
+  text-decoration: none;
+}
+#banner.size480x300 {
+  width: 480px;
+  height: 300px;
+}
+#banner.size480x300.emental {
+  background: #f0be6b;
+  background: radial-gradient(circle 236px at 47.4% 50.5%, #f1f0e7 0%, #f0be6b 100%);
+}
+
+html, body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
